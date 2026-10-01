@@ -1,0 +1,94 @@
+/*
+ * MPAS design tokens.
+ * Brand colours are taken from the MPAS Brand Guidelines (05 / Colour Palette).
+ * Neutrals are derived from the brand grey (#5A6670) and exist only to support UI.
+ */
+@theme {
+  /* ---------- Brand ---------- */
+  --color-mpas-green: #8ec640;
+  --color-mpas-green-dark: #39b54a;
+  --color-mpas-orange: #f7941d;
+  --color-mpas-orange-red: #f15a29;
+  --color-mpas-grey: #5a6670;
+  --color-white: #ffffff;
+
+  /* ---------- UI neutrals ---------- */
+  --color-canvas: #f6f6f3;
+  --color-surface: #ffffff;
+  --color-surface-muted: #ededea;
+  --color-line: #dcdcd7;
+  --color-line-strong: #c3c5c2;
+  --color-ink: #1d2226;
+  --color-ink-soft: #262c31;
+  --color-ink-line: #3a4248;
+  --color-text-primary: #1d2226;
+  --color-text-secondary: #5a6670;
+  --color-text-muted: #69727a;
+  --color-text-inverse: #f6f6f3;
+  --color-text-inverse-muted: #a9b1b8;
+
+  /* ---------- Typography ---------- */
+  --font-outfit: 'Outfit Variable', 'Outfit', ui-sans-serif, system-ui, sans-serif;
+  --font-public: 'Public Sans Variable', 'Public Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-public);
+
+  /* Fluid type scale: Display → Micro */
+  --text-display: clamp(3.25rem, 1.2rem + 7.4vw, 9rem);
+  --text-display--line-height: 0.94;
+  --text-display--letter-spacing: -0.04em;
+
+  --text-hero: clamp(2.75rem, 1.5rem + 4.6vw, 6.25rem);
+  --text-hero--line-height: 0.98;
+  --text-hero--letter-spacing: -0.035em;
+
+  --text-h1: clamp(2.25rem, 1.45rem + 3vw, 4.5rem);
+  --text-h1--line-height: 1.02;
+  --text-h1--letter-spacing: -0.03em;
+
+  --text-h2: clamp(1.875rem, 1.35rem + 1.9vw, 3.25rem);
+  --text-h2--line-height: 1.08;
+  --text-h2--letter-spacing: -0.025em;
+
+  --text-h3: clamp(1.3125rem, 1.15rem + 0.55vw, 1.75rem);
+  --text-h3--line-height: 1.2;
+  --text-h3--letter-spacing: -0.015em;
+
+  --text-body-lg: clamp(1.0625rem, 0.98rem + 0.32vw, 1.3125rem);
+  --text-body-lg--line-height: 1.6;
+
+  --text-body: 1rem;
+  --text-body--line-height: 1.65;
+
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.55;
+
+  --text-micro: 0.75rem;
+  --text-micro--line-height: 1.4;
+  --text-micro--letter-spacing: 0.14em;
+
+  /* ---------- Layout ---------- */
+  --container-site: 90rem; /* 1440px */
+  --container-copy: 40rem;
+  --spacing-gutter: clamp(1.25rem, 0.6rem + 3.2vw, 3.5rem);
+  --spacing-section: clamp(5.5rem, 3rem + 8vw, 10.5rem);
+  --spacing-header: 5.5rem;
+  --spacing-header-compact: 4.25rem;
+
+  /* ---------- Shape ---------- */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+
+  /* ---------- Motion ---------- */
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  --duration-fast: 200ms;
+  --duration-base: 450ms;
+  --duration-slow: 900ms;
+
+  /* ---------- Gradients (brand book "Gradient") ---------- */
+  --gradient-green: linear-gradient(90deg, #8ec640 0%, #39b54a 100%);
+  --gradient-orange: linear-gradient(90deg, #f7941d 0%, #f15a29 100%);
+  --gradient-bridge: linear-gradient(90deg, #8ec640 0%, #39b54a 45%, #f7941d 70%, #f15a29 100%);
+}

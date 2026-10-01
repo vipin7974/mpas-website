@@ -1,0 +1,95 @@
+import aboutImage from '@/assets/images/about-mumbai.webp';
+import symbol from '@/assets/branding/mpas-symbol.png';
+import { Section } from '@/components/common/Section';
+import { Container } from '@/components/common/Container';
+import { SectionHeading } from '@/components/common/SectionHeading';
+import { Reveal } from '@/components/common/Reveal';
+
+const pillars = [
+  {
+    name: 'Capital',
+    text: 'Connecting capital providers with credible India opportunities, and businesses with the right capital partners.',
+  },
+  {
+    name: 'Capability',
+    text: 'Bringing the sector, operational and policy depth needed to turn investment into enterprise.',
+  },
+  {
+    name: 'Execution',
+    text: 'Staying through delivery, so partnerships, supply chains and transformation create measurable value.',
+  },
+];
+
+export function About() {
+  return (
+    <Section id="about" labelledBy="about-title">
+      <Container>
+        <SectionHeading
+          index="01"
+          label="About Us"
+          titleId="about-title"
+          title="Bridging capital, capability and execution for Viksit Bharat."
+        />
+
+        <div className="mt-16 grid grid-cols-1 gap-12 md:mt-24 lg:grid-cols-12 lg:gap-8">
+          <div className="lg:col-span-4">
+          <Reveal variant="clip" className="media-frame aspect-[4/5] rounded-md lg:sticky lg:top-[calc(var(--spacing-header-compact)+2rem)]">
+            <img
+              src={aboutImage}
+              alt="The Gateway of India, Mumbai, at sunset"
+              width={1100}
+              height={1466}
+              loading="lazy"
+              decoding="async"
+            />
+          </Reveal>
+          </div>
+
+          <div className="lg:col-span-7 lg:col-start-6">
+            <Reveal stagger className="space-y-6 text-body-lg text-text-secondary">
+              <p>
+                <strong className="font-medium text-ink">Mahesh Palashikar Advisory Services (MPAS)</strong> is a
+                strategic advisory firm dedicated to Bridging Capital, Capability and Execution for Viksit Bharat. Led
+                by a senior leadership team with deep cross-sector expertise, we work with corporates, capital
+                providers, government bodies, and industry stakeholders to shape India strategy, unlock strategic
+                partnerships, and drive execution-led value creation.
+              </p>
+              <p>
+                From boardroom advisory to supply chain optimization and decarbonization, MPAS helps stakeholders
+                navigate India’s growth story with clarity, credibility, and impact.
+              </p>
+            </Reveal>
+
+            <ol className="mt-14 border-t border-line md:mt-20">
+              {pillars.map((p, i) => (
+                <Reveal
+                  as="li"
+                  key={p.name}
+                  delay={i * 0.08}
+                  className="group relative grid grid-cols-[3rem_1fr] gap-x-4 border-b border-line py-7 md:grid-cols-[4rem_12rem_1fr] md:gap-x-6 md:py-8"
+                >
+                  <span
+                    aria-hidden
+                    className="absolute -top-px left-0 h-px w-full origin-left scale-x-0 bg-[image:var(--gradient-bridge)] transition-transform duration-700 ease-expo group-hover:scale-x-100"
+                  />
+                  <span className="eyebrow pt-1.5 text-mpas-green-dark">{String(i + 1).padStart(2, '0')}</span>
+                  <h3 className="font-outfit text-h3 text-ink">{p.name}</h3>
+                  <p className="col-start-2 mt-2 text-text-secondary md:col-start-3 md:mt-0 md:pt-1">{p.text}</p>
+                </Reveal>
+              ))}
+            </ol>
+
+            <Reveal className="mt-14 flex items-start gap-6 rounded-md bg-surface p-6 md:mt-20 md:p-8">
+              <img src={symbol} alt="" width={342} height={199} loading="lazy" className="mt-1 h-8 w-auto shrink-0 md:h-10" />
+              <p className="text-small text-text-secondary">
+                Our identity centres on a bridge, a symbol of{' '}
+                <span className="text-ink">connection, partnership and progress</span>. It links Capital with
+                Capability, reflecting our belief that value is created only when both come together.
+              </p>
+            </Reveal>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
