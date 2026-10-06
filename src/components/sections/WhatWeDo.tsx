@@ -1,6 +1,7 @@
 import { useId, useState } from 'react';
 import { Plus } from 'lucide-react';
-import { services, type Service } from '@/data/services';
+import { type Service } from '@/data/services';
+import { useSiteConfig } from '@/context/SiteConfig';
 import { Section } from '@/components/common/Section';
 import { Container } from '@/components/common/Container';
 import { SectionHeading } from '@/components/common/SectionHeading';
@@ -61,7 +62,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
           className="group/btn mt-6 inline-flex items-center gap-3 py-1 font-outfit text-small font-medium uppercase tracking-[0.12em] text-ink"
         >
           <span className="link-underline group-hover/btn:bg-[length:100%_1px]">{open ? 'Show less' : 'Read more'}</span>
-          <span className="flex size-8 items-center justify-center rounded-full border border-ink/20 transition-colors duration-500 group-hover/btn:border-ink group-hover/btn:bg-ink group-hover/btn:text-white">
+          <span className="flex size-8 items-center justify-center rounded-full border border-ink/20 transition-colors duration-500 group-hover/btn:border-ink group-hover/btn:bg-mpas-orange group-hover/btn:text-white">
             <Plus
               aria-hidden
               strokeWidth={1.5}
@@ -75,15 +76,17 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
 }
 
 export function WhatWeDo() {
+  const { config } = useSiteConfig();
+  const services = config.services;
   return (
     <Section id="what-we-do" labelledBy="what-we-do-title">
       <Container>
         <SectionHeading
           index="03"
-          label="What We Do"
+          label={config.sectionHeadings['what-we-do'].label}
           titleId="what-we-do-title"
-          title="From boardroom advisory to execution on the ground."
-          description="Four integrated practices, one senior team. We shape the strategy, assemble the partnerships and capital, and stay through delivery."
+          title={config.sectionHeadings['what-we-do'].title}
+          description={config.sectionHeadings['what-we-do'].description}
         />
 
         <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-16 md:mt-24 md:grid-cols-2 md:gap-y-20 lg:gap-x-16 lg:pb-32 lg:[&>*:nth-child(even)]:translate-y-32">

@@ -1,5 +1,6 @@
 import { useRef, type RefObject } from 'react';
 import logo from '@/assets/branding/mpas-logo-horizontal.png';
+import { useSiteConfig } from '@/context/SiteConfig';
 import { navigation, contactNav, sectionIds } from '@/data/navigation';
 import { useScrolled, useOverDark } from '@/hooks/useScrolled';
 import { useActiveSection } from '@/hooks/useActiveSection';
@@ -17,6 +18,7 @@ interface HeaderProps {
 }
 
 export function Header({ menuOpen, onOpenMenu, menuButtonRef }: HeaderProps) {
+  const { config } = useSiteConfig();
   const scrolled = useScrolled(24);
   const onDark = useOverDark();
   const active = useActiveSection(sectionIds);
@@ -47,7 +49,7 @@ export function Header({ menuOpen, onOpenMenu, menuButtonRef }: HeaderProps) {
         className={cn(
           'border-b transition-[background-color,border-color,backdrop-filter] duration-500 ease-expo',
           onDark && !menuOpen
-            ? 'border-white/10 bg-ink/80 backdrop-blur-md'
+            ? 'border-white/10 bg-orange-soft/90 backdrop-blur-md'
             : scrolled && !menuOpen
             ? 'border-line/80 bg-canvas/85 backdrop-blur-md backdrop-saturate-150'
             : 'border-transparent bg-transparent',
@@ -66,8 +68,8 @@ export function Header({ menuOpen, onOpenMenu, menuButtonRef }: HeaderProps) {
             aria-label="Mahesh Palashikar Advisory Services — back to top"
           >
             <img
-              src={logo}
-              alt="MPAS"
+              src={config.brand.logo || logo}
+              alt="mpas"
               width={956}
               height={193}
               className={cn(
@@ -103,7 +105,7 @@ export function Header({ menuOpen, onOpenMenu, menuButtonRef }: HeaderProps) {
                         aria-hidden
                         className={cn(
                           'absolute inset-x-3 bottom-1 h-px origin-left transition-transform duration-500 ease-expo',
-                          onDark ? 'bg-white' : 'bg-ink',
+                          onDark ? 'bg-white' : 'bg-mpas-orange',
                           isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100',
                         )}
                       />
@@ -138,8 +140,8 @@ export function Header({ menuOpen, onOpenMenu, menuButtonRef }: HeaderProps) {
             >
               <span className={cn('eyebrow', onDark ? 'text-white' : 'text-ink')}>Menu</span>
               <span aria-hidden className="flex w-6 flex-col items-end gap-[5px]">
-                <span className={cn('h-px w-6', onDark ? 'bg-white' : 'bg-ink', ' transition-[width] duration-500 ease-expo group-hover:w-4')} />
-                <span className={cn('h-px w-4', onDark ? 'bg-white' : 'bg-ink', ' transition-[width] duration-500 ease-expo group-hover:w-6')} />
+                <span className={cn('h-px w-6', onDark ? 'bg-white' : 'bg-mpas-orange', ' transition-[width] duration-500 ease-expo group-hover:w-4')} />
+                <span className={cn('h-px w-4', onDark ? 'bg-white' : 'bg-mpas-orange', ' transition-[width] duration-500 ease-expo group-hover:w-6')} />
               </span>
             </button>
           </div>

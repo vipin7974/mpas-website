@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react';
 import { ArrowUp } from 'lucide-react';
 import logo from '@/assets/branding/mpas-logo-horizontal.png';
+import { useSiteConfig } from '@/context/SiteConfig';
 import { navigation, contactNav } from '@/data/navigation';
-import { services } from '@/data/services';
-import { site } from '@/data/site';
+
 import { Container } from '@/components/common/Container';
 import { Button } from '@/components/common/Button';
 import { Reveal } from '@/components/common/Reveal';
@@ -20,8 +20,11 @@ function FooterColumn({ title, children, className }: { title: string; children:
 const linkClass = 'link-underline text-small text-white/80 transition-colors duration-300 hover:text-white';
 
 export function Footer() {
+  const { config } = useSiteConfig();
+  const site = { ...config.brand, year: new Date().getFullYear() };
+  const services = config.services;
   return (
-    <footer data-header-theme="dark" className="relative bg-ink text-text-inverse" aria-labelledby="footer-title">
+    <footer data-header-theme="dark" className="relative bg-mpas-green-dark text-text-inverse" aria-labelledby="footer-title">
       <h2 id="footer-title" className="sr-only">
         Site footer
       </h2>
@@ -31,8 +34,8 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-5">
             <img
-              src={logo}
-              alt="MPAS"
+              src={config.brand.logo || logo}
+              alt="mpas"
               width={956}
               height={193}
               loading="lazy"

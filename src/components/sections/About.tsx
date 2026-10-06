@@ -3,6 +3,7 @@ import symbol from '@/assets/branding/mpas-symbol.png';
 import { Section } from '@/components/common/Section';
 import { Container } from '@/components/common/Container';
 import { SectionHeading } from '@/components/common/SectionHeading';
+import { useSiteConfig } from '@/context/SiteConfig';
 import { Reveal } from '@/components/common/Reveal';
 
 const pillars = [
@@ -21,21 +22,23 @@ const pillars = [
 ];
 
 export function About() {
+  const { config } = useSiteConfig();
   return (
     <Section id="about" labelledBy="about-title">
       <Container>
         <SectionHeading
           index="01"
-          label="About Us"
+          label={config.sectionHeadings['about'].label}
           titleId="about-title"
-          title="Bridging capital, capability and execution for Viksit Bharat."
+          title={config.sectionHeadings['about'].title}
+          description={config.sectionHeadings['about'].description}
         />
 
         <div className="mt-16 grid grid-cols-1 gap-12 md:mt-24 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-4">
           <Reveal variant="clip" className="media-frame aspect-[4/5] rounded-md lg:sticky lg:top-[calc(var(--spacing-header-compact)+2rem)]">
             <img
-              src={aboutImage}
+              src={config.media.about || aboutImage}
               alt="The Gateway of India, Mumbai, at sunset"
               width={1100}
               height={1466}
@@ -48,14 +51,14 @@ export function About() {
           <div className="lg:col-span-7 lg:col-start-6">
             <Reveal stagger className="space-y-6 text-body-lg text-text-secondary">
               <p>
-                <strong className="font-medium text-ink">Mahesh Palashikar Advisory Services (MPAS)</strong> is a
+                <strong className="font-medium text-ink">Mahesh Palashikar Advisory Services (mpas)</strong> is a
                 strategic advisory firm dedicated to Bridging Capital, Capability and Execution for Viksit Bharat. Led
                 by a senior leadership team with deep cross-sector expertise, we work with corporates, capital
                 providers, government bodies, and industry stakeholders to shape India strategy, unlock strategic
                 partnerships, and drive execution-led value creation.
               </p>
               <p>
-                From boardroom advisory to supply chain optimization and decarbonization, MPAS helps stakeholders
+                From boardroom advisory to supply chain optimization and decarbonization, mpas helps stakeholders
                 navigate India’s growth story with clarity, credibility, and impact.
               </p>
             </Reveal>

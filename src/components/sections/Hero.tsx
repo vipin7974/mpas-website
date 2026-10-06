@@ -4,6 +4,7 @@ import { useGsap } from '@/hooks/useGsap';
 import { gsap } from '@/lib/gsap';
 import { useReady } from '@/lib/ready';
 import { Container } from '@/components/common/Container';
+import { useSiteConfig } from '@/context/SiteConfig';
 import { Button } from '@/components/common/Button';
 
 /** Soft angled planes echoing the brand book cover. Purely decorative. */
@@ -28,6 +29,7 @@ function HeroPlanes() {
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
   const ready = useReady();
+  const { config } = useSiteConfig();
 
   useGsap(
     ({ scope }) => {
@@ -82,23 +84,23 @@ export function Hero() {
             <div data-hero-heading>
               <p data-hero-fade className="eyebrow mb-8 flex items-center gap-3 text-text-secondary md:mb-10">
                 <span aria-hidden className="bridge-rule w-8" />
-                Mahesh Palashikar Advisory Services
+                {config.hero.eyebrow}
               </p>
 
               <h1 id="hero-title" className="font-outfit text-hero text-ink">
                 <span className="block overflow-hidden pb-[0.06em]">
                   <span data-hero-line className="block font-extralight text-text-secondary">
-                    Bridging
+                    {config.hero.lines[0]}
                   </span>
                 </span>
                 <span className="block overflow-hidden pb-[0.06em]">
                   <span data-hero-line className="block font-normal">
-                    Capital, Capability,
+                    {config.hero.lines[1]}
                   </span>
                 </span>
                 <span className="block overflow-hidden pb-[0.08em]">
                   <span data-hero-line className="block font-normal">
-                    Execution
+                    {config.hero.lines[2].replace(/\.$/, '')}
                     <span className="text-mpas-orange-red">.</span>
                   </span>
                 </span>
@@ -107,11 +109,10 @@ export function Hero() {
           </div>
           <div className="lg:col-span-4 lg:pb-3">
             <p data-hero-fade className="max-w-md text-body-lg text-text-secondary">
-              A strategic advisory firm helping corporates, capital providers and government bodies navigate
-              India’s growth story with clarity, credibility and impact.
+              {config.hero.description}
             </p>
             <div data-hero-fade className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4 md:mt-10">
-              <Button href="#what-we-do">Explore what we do</Button>
+              <Button href="#what-we-do">{config.hero.primaryCta}</Button>
               <Button href="#contact" variant="link">
                 Talk to us
               </Button>
@@ -128,8 +129,8 @@ export function Hero() {
               <div data-hero-img-wrap className="absolute inset-x-0 -top-[8%] h-[116%]">
                 <img
                   data-hero-img
-                  src={heroImage}
-                  alt="Mumbai sea bridge spanning the water"
+                  src={config.media.hero || heroImage}
+                  alt="Glass office towers rising into a clear sky"
                   width={2200}
                   height={1467}
                   fetchPriority="high"
@@ -137,7 +138,7 @@ export function Hero() {
                   className="h-full w-full object-cover"
                 />
               </div>
-              <div aria-hidden className="absolute inset-0 bg-linear-to-t from-ink/45 via-ink/0 to-ink/0" />
+              <div aria-hidden className="absolute inset-0 bg-linear-to-t from-ink/50 via-ink/0 to-ink/0" />
               <div
                 aria-hidden
                 data-hero-fade

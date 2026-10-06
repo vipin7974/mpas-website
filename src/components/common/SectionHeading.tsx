@@ -23,7 +23,7 @@ export function Eyebrow({ index, label, tone = 'light' }: { index: string; label
   return (
     <Reveal variant="fade" className={cn('eyebrow flex items-center gap-3', tone === 'dark' ? 'text-text-inverse-muted' : 'text-text-secondary')}>
       <span className={tone === 'dark' ? 'text-mpas-green' : 'text-mpas-green-dark'}>{index}</span>
-      <span aria-hidden className={cn('h-px w-8', tone === 'dark' ? 'bg-white/25' : 'bg-ink/20')} />
+      <span aria-hidden className={cn('h-px w-8', tone === 'dark' ? 'bg-white/25' : 'bg-mpas-orange/20')} />
       <span>{label}</span>
     </Reveal>
   );

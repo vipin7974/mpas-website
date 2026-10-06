@@ -7,6 +7,8 @@ import { Footer } from '@/components/layout/Footer';
 import { Loader } from '@/components/layout/Loader';
 import { ScrollProgress } from '@/components/layout/ScrollProgress';
 import { Home } from '@/pages/Home';
+import { Admin } from '@/pages/Admin';
+import { SiteConfigProvider } from '@/context/SiteConfig';
 
 export default function App() {
   const [ready, setReady] = useState(false);
@@ -26,11 +28,15 @@ export default function App() {
     return () => window.removeEventListener('load', refresh);
   }, []);
 
+  if (window.location.pathname.replace(/\/$/, '') === '/admin') {
+    return <SiteConfigProvider><Admin /></SiteConfigProvider>;
+  }
+
   return (
-    <ReadyContext.Provider value={ready}>
+    <SiteConfigProvider><ReadyContext.Provider value={ready}>
       <a
         href="#main"
-        className="sr-only z-[200] rounded-sm bg-ink px-4 py-3 text-small text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+        className="sr-only z-[200] rounded-sm bg-mpas-orange px-4 py-3 text-small text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
       >
         Skip to content
       </a>
@@ -42,6 +48,6 @@ export default function App() {
         <Home />
       </main>
       <Footer />
-    </ReadyContext.Provider>
+    </ReadyContext.Provider></SiteConfigProvider>
   );
 }

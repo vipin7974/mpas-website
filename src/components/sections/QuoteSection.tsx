@@ -1,12 +1,14 @@
 import { useRef } from 'react';
 import quoteImage from '@/assets/images/quote-grid.webp';
 import { useGsap } from '@/hooks/useGsap';
+import { useSiteConfig } from '@/context/SiteConfig';
 import { gsap } from '@/lib/gsap';
 import { Container } from '@/components/common/Container';
 import { Reveal } from '@/components/common/Reveal';
 
 export function QuoteSection() {
   const ref = useRef<HTMLElement>(null);
+  const { config } = useSiteConfig();
 
   useGsap(
     ({ scope }) => {
@@ -28,11 +30,11 @@ export function QuoteSection() {
       ref={ref}
       aria-label="Our philosophy"
       data-header-theme="dark"
-      className="relative flex min-h-[80svh] items-center overflow-hidden bg-ink py-section text-white"
+      className="relative flex min-h-[70svh] items-center overflow-hidden bg-mpas-green-dark py-section text-white"
     >
       <div data-parallax aria-hidden className="absolute inset-x-0 -top-[12%] h-[124%]">
         <img
-          src={quoteImage}
+          src={config.media.quote || quoteImage}
           alt=""
           width={2200}
           height={1467}
@@ -58,7 +60,7 @@ export function QuoteSection() {
             </blockquote>
             <Reveal as="figcaption" delay={0.2} className="mt-10 flex items-center gap-4 md:mt-14">
               <span aria-hidden className="bridge-rule w-12" />
-              <span className="eyebrow text-white/75">The MPAS philosophy</span>
+              <span className="eyebrow text-white/75">The mpas philosophy</span>
             </Reveal>
           </div>
         </figure>

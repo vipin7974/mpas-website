@@ -29,7 +29,7 @@ function fontsReady(timeout: number) {
 }
 
 /**
- * Brief branded intro: the MPAS symbol and a bridge-gradient progress rule,
+ * Brief branded intro: the mpas symbol and a bridge-gradient progress rule,
  * then a curtain lift into the hero. Shortened on repeat visits, skipped for reduced motion.
  */
 export function Loader({ onDone }: { onDone: () => void }) {

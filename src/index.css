@@ -28,6 +28,8 @@
     font-size: var(--text-body);
     line-height: var(--text-body--line-height);
     overflow-x: clip;
+    min-width: 320px;
+    overflow-wrap: anywhere;
   }
 
   body.is-locked {
@@ -45,6 +47,20 @@
 
   p {
     text-wrap: pretty;
+    max-width: 100%;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, a, button, label, li, td, th {
+    overflow-wrap: anywhere;
+  }
+
+  button, a {
+    max-width: 100%;
+  }
+
+  input, textarea, select {
+    min-width: 0;
+    max-width: 100%;
   }
 
   ::selection {
@@ -97,6 +113,13 @@
   }
 
   /* Media frame used for editorial image crops */
+
+  /* Soft orange surfaces: keeps the brand orange bright for actions/hover while
+     making large background areas calmer and more premium. */
+  .bg-orange-soft {
+    background-color: color-mix(in srgb, var(--color-mpas-orange) 12%, white);
+  }
+
   .media-frame {
     position: relative;
     overflow: hidden;
@@ -159,4 +182,8 @@
     transform: scale(3.2);
     opacity: 0;
   }
+}
+
+@media (max-width: 639px) {
+  .eyebrow { letter-spacing: 0.11em; }
 }

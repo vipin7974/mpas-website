@@ -21,7 +21,7 @@ export interface Audience {
   description: string;
 }
 
-/** Who MPAS works with (brand book, 01 / About Us). */
+/** Who mpas works with (brand book, 01 / About Us). */
 export const audiences: Audience[] = [
   {
     title: 'Corporates',

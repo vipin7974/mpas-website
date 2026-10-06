@@ -21,8 +21,8 @@ const solid =
   'before:absolute before:inset-0 before:-z-10 before:origin-left before:scale-x-0 before:transition-transform before:duration-600 before:ease-expo hover:before:scale-x-100 focus-visible:before:scale-x-100';
 
 const variants: Record<Variant, string> = {
-  primary: cn(solid, 'bg-ink text-white before:bg-mpas-green-dark'),
-  outline: cn(solid, 'border border-ink/25 text-ink before:bg-ink hover:border-ink hover:text-white focus-visible:text-white'),
+  primary: cn(solid, 'bg-mpas-orange text-white before:bg-mpas-green-dark'),
+  outline: cn(solid, 'border border-ink/25 text-ink before:bg-mpas-orange hover:border-ink hover:text-white focus-visible:text-white'),
   inverse: cn(solid, 'bg-white text-ink before:bg-mpas-green'),
   'outline-inverse': cn(
     solid,

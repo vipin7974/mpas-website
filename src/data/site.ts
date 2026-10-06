@@ -4,7 +4,7 @@
  */
 export const site = {
   name: 'Mahesh Palashikar Advisory Services',
-  shortName: 'MPAS',
+  shortName: 'mpas',
   tagline: 'Bridging Capital, Capability, Execution',
   // PLACEHOLDER: confirm the production domain (also used in index.html).
   url: 'https://www.mpasadvisory.in',

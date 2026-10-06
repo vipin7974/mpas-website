@@ -6,9 +6,11 @@ import { gsap } from '@/lib/gsap';
 import { Section } from '@/components/common/Section';
 import { Container } from '@/components/common/Container';
 import { SectionHeading } from '@/components/common/SectionHeading';
+import { useSiteConfig } from '@/context/SiteConfig';
 import { Reveal } from '@/components/common/Reveal';
 
 export function Expertise() {
+  const { config } = useSiteConfig();
   const ref = useRef<HTMLElement>(null);
 
   useGsap(
@@ -35,15 +37,15 @@ export function Expertise() {
               <SectionHeading
                 layout="stacked"
                 index="02"
-                label="Expertise"
+                label={config.sectionHeadings['expertise'].label}
                 titleId="expertise-title"
-                title="Senior leadership. Cross-sector depth."
-                description="Led by a senior leadership team with deep cross-sector expertise, we give every side of the table advice it can act on — whether you allocate capital, build capability or shape policy."
+                title={config.sectionHeadings['expertise'].title}
+                description={config.sectionHeadings['expertise'].description}
               />
               <Reveal variant="clip" className="media-frame mt-12 hidden aspect-[4/3] rounded-md md:block">
                 <div data-parallax className="absolute inset-x-0 -top-[8%] h-[116%]">
                   <img
-                    src={boardroom}
+                    src={config.media.expertise || boardroom}
                     alt="Leadership team in discussion around a boardroom table"
                     width={1600}
                     height={1067}

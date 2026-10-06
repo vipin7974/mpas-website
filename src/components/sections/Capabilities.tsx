@@ -4,10 +4,12 @@ import { useGsap } from '@/hooks/useGsap';
 import { gsap } from '@/lib/gsap';
 import { Container } from '@/components/common/Container';
 import { SectionHeading } from '@/components/common/SectionHeading';
+import { useSiteConfig } from '@/context/SiteConfig';
 import { Reveal } from '@/components/common/Reveal';
 import { Button } from '@/components/common/Button';
 
 export function Capabilities() {
+  const { config } = useSiteConfig();
   const ref = useRef<HTMLElement>(null);
 
   // The dark panel opens out from an inset card to full-bleed as it enters —
@@ -29,7 +31,7 @@ export function Capabilities() {
 
   return (
     <section ref={ref} id="capabilities" aria-labelledby="capabilities-title" className="relative bg-surface">
-      <div data-panel data-header-theme="dark" className="relative overflow-hidden bg-ink py-section text-text-inverse">
+      <div data-panel data-header-theme="dark" className="relative overflow-hidden bg-mpas-green-dark py-section text-text-inverse">
         {/* Faint bridge arc motif */}
         <svg
           aria-hidden
@@ -52,10 +54,10 @@ export function Capabilities() {
           <SectionHeading
             tone="dark"
             index="05"
-            label="Capabilities"
+            label={config.sectionHeadings['capabilities'].label}
             titleId="capabilities-title"
-            title="Capabilities that carry strategy through to execution."
-            description="A senior, hands-on toolkit, deployed as a single engagement or as part of a long-term partnership."
+            title={config.sectionHeadings['capabilities'].title}
+            description={config.sectionHeadings['capabilities'].description}
           />
 
           <ol className="mt-16 grid grid-cols-1 gap-x-8 md:mt-24 md:grid-cols-2 lg:gap-x-16">

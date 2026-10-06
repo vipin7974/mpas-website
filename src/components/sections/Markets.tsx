@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils';
 import { Section } from '@/components/common/Section';
 import { Container } from '@/components/common/Container';
 import { SectionHeading } from '@/components/common/SectionHeading';
+import { useSiteConfig } from '@/context/SiteConfig';
 import { Reveal } from '@/components/common/Reveal';
 
 const VIEW = { w: 1000, h: 700 };
@@ -83,6 +84,7 @@ function CorridorDiagram({ active }: { active: string | null }) {
 }
 
 export function Markets() {
+  const { config } = useSiteConfig();
   const ref = useRef<HTMLElement>(null);
   const [active, setActive] = useState<string | null>(null);
 
@@ -116,19 +118,19 @@ export function Markets() {
       <Container>
         <SectionHeading
           index="06"
-          label="Markets"
+          label={config.sectionHeadings['markets'].label}
           titleId="markets-title"
-          title="India, connected to the world."
-          description="We help global stakeholders engage with India, and Indian enterprises build the partnerships to scale beyond it."
+          title={config.sectionHeadings['markets'].title}
+          description={config.sectionHeadings['markets'].description}
         />
 
         <div className="mt-16 grid grid-cols-1 gap-12 md:mt-24 lg:grid-cols-12 lg:items-center lg:gap-8">
           <Reveal
             variant="clip"
-            className="media-frame order-1 aspect-[10/7] rounded-lg bg-ink lg:order-2 lg:col-span-7 lg:col-start-6"
+            className="media-frame order-1 aspect-[10/7] rounded-lg bg-orange-soft lg:order-2 lg:col-span-7 lg:col-start-6"
           >
             <div data-diagram className="absolute inset-0">
-              <img src={earth} alt="" width={2000} height={1331} loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover opacity-45" />
+              <img src={config.media.markets || earth} alt="" width={2000} height={1331} loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover opacity-45" />
               <div aria-hidden className="absolute inset-0 bg-linear-to-r from-ink/85 via-ink/55 to-ink/30" />
               <CorridorDiagram active={active} />
               <p className="eyebrow absolute bottom-5 left-5 text-white/60 md:bottom-7 md:left-7">Corridors into India</p>

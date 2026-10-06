@@ -1,8 +1,8 @@
 import { useEffect, useLayoutEffect, useRef, useState, type RefObject } from 'react';
 import { ArrowUpRight, X } from 'lucide-react';
 import logo from '@/assets/branding/mpas-logo-horizontal.png';
+import { useSiteConfig } from '@/context/SiteConfig';
 import { navigation, contactNav } from '@/data/navigation';
-import { site } from '@/data/site';
 import { gsap, prefersReducedMotion } from '@/lib/gsap';
 import { Container } from '@/components/common/Container';
 
@@ -15,6 +15,8 @@ interface MobileMenuProps {
 const items = [...navigation, contactNav];
 
 export function MobileMenu({ open, onClose, returnFocusRef }: MobileMenuProps) {
+  const { config } = useSiteConfig();
+  const site = { email: config.brand.email, location: config.brand.location };
   const rootRef = useRef<HTMLDivElement>(null);
   const tlRef = useRef<gsap.core.Timeline | null>(null);
   const [mounted, setMounted] = useState(false);
@@ -119,7 +121,7 @@ export function MobileMenu({ open, onClose, returnFocusRef }: MobileMenuProps) {
     >
       <Container className="flex h-header shrink-0 items-center justify-between" >
         <div data-menu-bar className="flex w-full items-center justify-between">
-          <img src={logo} alt="MPAS" width={956} height={193} className="h-8 w-auto md:h-9" />
+          <img src={config.brand.logo || logo} alt="mpas" width={956} height={193} className="h-8 w-auto md:h-9" />
           <button
             type="button"
             onClick={onClose}

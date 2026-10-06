@@ -1,7 +1,6 @@
 import { useState, type FormEvent, type ReactNode } from 'react';
 import { Mail, MapPin } from 'lucide-react';
-import { services } from '@/data/services';
-import { site } from '@/data/site';
+import { useSiteConfig } from '@/context/SiteConfig';
 import { cn } from '@/lib/utils';
 import { Section } from '@/components/common/Section';
 import { Container } from '@/components/common/Container';
@@ -41,6 +40,9 @@ function Field({
 }
 
 export function Contact() {
+  const { config } = useSiteConfig();
+  const site = { email: config.brand.email, location: config.brand.location };
+  const services = config.services;
   const [status, setStatus] = useState<Status>('idle');
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -74,10 +76,10 @@ export function Contact() {
             <SectionHeading
               layout="stacked"
               index="07"
-              label="Contact"
+              label={config.sectionHeadings['contact'].label}
               titleId="contact-title"
-              title="Let’s build what’s next, together."
-              description="Whether you are shaping an India strategy, looking for the right partner or ready to execute, we would welcome a conversation."
+              title={config.sectionHeadings['contact'].title}
+              description={config.sectionHeadings['contact'].description}
             />
 
             <Reveal as="dl" stagger className="mt-12 space-y-6 md:mt-16">

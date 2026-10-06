@@ -1,19 +1,21 @@
-import { industries } from '@/data/industries';
+import { useSiteConfig } from '@/context/SiteConfig';
 import { Section } from '@/components/common/Section';
 import { Container } from '@/components/common/Container';
 import { SectionHeading } from '@/components/common/SectionHeading';
 import { Reveal } from '@/components/common/Reveal';
 
 export function Industries() {
+  const { config } = useSiteConfig();
+  const industries = config.industries;
   return (
     <Section id="industries" tone="surface" labelledBy="industries-title" className="overflow-hidden">
       <Container>
         <SectionHeading
           index="04"
-          label="Industry Sectors"
+          label={config.sectionHeadings['industries'].label}
           titleId="industries-title"
-          title="Sector depth across India’s growth engines."
-          description="We bring working knowledge of the sectors driving India’s next decade — the policy, the players and the practicalities of getting things built."
+          title={config.sectionHeadings['industries'].title}
+          description={config.sectionHeadings['industries'].description}
         />
       </Container>
 
@@ -32,9 +34,9 @@ export function Industries() {
               key={industry.id}
               tabIndex={0}
               aria-label={`${industry.name}: ${industry.description}`}
-              className="group relative w-[78vw] max-w-sm shrink-0 snap-start overflow-hidden rounded-md bg-ink md:w-auto md:max-w-none"
+              className="group relative w-[82vw] max-w-sm shrink-0 snap-start overflow-hidden rounded-md bg-surface md:w-auto md:max-w-none"
             >
-              <div className="media-frame aspect-[4/5] bg-ink">
+              <div className="media-frame aspect-[4/5]">
                 <img
                   src={industry.image}
                   alt=""
@@ -42,12 +44,10 @@ export function Industries() {
                   height={800}
                   loading="lazy"
                   decoding="async"
-                  className="opacity-90 transition-[transform,opacity] duration-[1400ms] ease-expo group-hover:scale-[1.06] group-hover:opacity-100 group-focus-visible:scale-[1.06]"
+                  className="transition-transform duration-[1400ms] ease-expo group-hover:scale-[1.06] group-focus-visible:scale-[1.06]"
                 />
               </div>
-              <div aria-hidden className="absolute inset-0 bg-linear-to-t from-ink/90 via-ink/25 to-ink/5" />
-
-              <div aria-hidden className="absolute inset-0 flex flex-col justify-between p-6 text-white md:p-7">
+              <div aria-hidden className="absolute inset-0 flex flex-col justify-between bg-gradient-to-b from-black/10 via-transparent to-black/75 p-6 text-white md:p-7">
                 <span className="eyebrow text-white/75">{String(i + 1).padStart(2, '0')}</span>
                 <div>
                   <h3 className="font-outfit text-h3 text-white">{industry.name}</h3>

@@ -5,25 +5,25 @@
  */
 @theme {
   /* ---------- Brand ---------- */
-  --color-mpas-green: #8ec640;
-  --color-mpas-green-dark: #39b54a;
-  --color-mpas-orange: #f7941d;
-  --color-mpas-orange-red: #f15a29;
+  --color-mpas-green: #78a84a;
+  --color-mpas-green-dark: #245b3a;
+  --color-mpas-orange: #e07832;
+  --color-mpas-orange-red: #c95d24;
   --color-mpas-grey: #5a6670;
   --color-white: #ffffff;
 
   /* ---------- UI neutrals ---------- */
-  --color-canvas: #f6f6f3;
+  --color-canvas: #f7f3ea;
   --color-surface: #ffffff;
-  --color-surface-muted: #ededea;
-  --color-line: #dcdcd7;
-  --color-line-strong: #c3c5c2;
-  --color-ink: #1d2226;
-  --color-ink-soft: #262c31;
-  --color-ink-line: #3a4248;
-  --color-text-primary: #1d2226;
-  --color-text-secondary: #5a6670;
-  --color-text-muted: #69727a;
+  --color-surface-muted: #eee8dc;
+  --color-line: #ddd7cc;
+  --color-line-strong: #bdb5a8;
+  --color-ink: #18352a;
+  --color-ink-soft: #304139;
+  --color-ink-line: #547064;
+  --color-text-primary: #18352a;
+  --color-text-secondary: #536158;
+  --color-text-muted: #6f7a72;
   --color-text-inverse: #f6f6f3;
   --color-text-inverse-muted: #a9b1b8;
 
@@ -88,7 +88,7 @@
   --duration-slow: 900ms;
 
   /* ---------- Gradients (brand book "Gradient") ---------- */
-  --gradient-green: linear-gradient(90deg, #8ec640 0%, #39b54a 100%);
-  --gradient-orange: linear-gradient(90deg, #f7941d 0%, #f15a29 100%);
-  --gradient-bridge: linear-gradient(90deg, #8ec640 0%, #39b54a 45%, #f7941d 70%, #f15a29 100%);
+  --gradient-green: linear-gradient(90deg, #78a84a 0%, #245b3a 100%);
+  --gradient-orange: linear-gradient(90deg, #e07832 0%, #c95d24 100%);
+  --gradient-bridge: linear-gradient(90deg, #78a84a 0%, #245b3a 45%, #e07832 72%, #c95d24 100%);
 }

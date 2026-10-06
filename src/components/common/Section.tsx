@@ -16,7 +16,7 @@ interface SectionProps {
 const toneClass: Record<Tone, string> = {
   canvas: 'bg-canvas text-text-primary',
   surface: 'bg-surface text-text-primary',
-  ink: 'bg-ink text-text-inverse',
+  ink: 'bg-mpas-green-dark text-text-inverse',
 };
 
 export const Section = forwardRef<HTMLElement, SectionProps>(function Section(

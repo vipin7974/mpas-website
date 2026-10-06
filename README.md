@@ -26,3 +26,19 @@ Motion only runs when `prefers-reduced-motion` is not set. With reduced motion o
 2. Industry, capability and market lists in `src/data/`. These are sensible defaults written for MPAS and should be reviewed by the firm.
 3. Photography is from Unsplash (free licence). Replace it with MPAS-owned imagery if available.
 4. The contact form opens the visitor's email client (`mailto:`). Connect it to a form backend if you want submissions sent server-side.
+
+
+## Updated MPAS visual direction
+
+- Light, warm fresh-orange canvas replaces the heavy grey feel.
+- Green is retained as the sustainability / green-economy signal.
+- Dark/black-heavy content surfaces have been converted to orange surfaces.
+- Industries section layout and imagery are retained.
+- Written brand references use lowercase `mpas`.
+- Typography is intentionally less bold and more editorial.
+
+## Site control center
+
+Run `npm install` and `npm run dev`, then open `/admin`. The control center manages brand/contact details, hero copy, section visibility/headings, Industries, Services, theme colours, SEO metadata, and JSON backup/import. Settings are stored in browser localStorage.
+
+For a multi-user production CMS with shared server-side content, connect the same config model to a database/auth API before public launch.
