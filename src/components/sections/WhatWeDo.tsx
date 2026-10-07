@@ -1,3 +1,5 @@
+'use client';
+
 import { useId, useState } from 'react';
 import { Plus } from 'lucide-react';
 import { type Service } from '@/data/services';

@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useRef } from 'react';
 
 /** 2px bridge-gradient reading-progress line pinned to the top of the viewport. */

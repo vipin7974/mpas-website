@@ -1,7 +1,7 @@
-import serviceIndia from '@/assets/images/service-india.webp';
-import servicePartnerships from '@/assets/images/service-partnerships.webp';
-import commercial from '@/assets/images/hero.webp';
-import boardroom from '@/assets/images/expertise-boardroom.webp';
+const serviceIndia = '/images/service-india.webp';
+const servicePartnerships = '/images/service-partnerships.webp';
+const commercial = '/images/hero.webp';
+const boardroom = '/images/expertise-boardroom.webp';
 
 export interface Service {
   id: string;

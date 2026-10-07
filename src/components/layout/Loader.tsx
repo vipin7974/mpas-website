@@ -1,5 +1,7 @@
+'use client';
+
 import { useLayoutEffect, useRef, useState } from 'react';
-import symbol from '@/assets/branding/mpas-symbol.png';
+const symbol = '/branding/mpas-symbol.png';
 import { gsap, prefersReducedMotion } from '@/lib/gsap';
 
 const SEEN_KEY = 'mpas:intro-seen';

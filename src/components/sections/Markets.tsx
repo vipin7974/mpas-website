@@ -1,12 +1,13 @@
+'use client';
+
 import { useRef, useState } from 'react';
-import earth from '@/assets/images/markets-earth.webp';
-import { markets } from '@/data/markets';
 import { useGsap } from '@/hooks/useGsap';
 import { gsap } from '@/lib/gsap';
 import { cn } from '@/lib/utils';
 import { Section } from '@/components/common/Section';
 import { Container } from '@/components/common/Container';
 import { SectionHeading } from '@/components/common/SectionHeading';
+import type { Market } from '@/sanity/types';
 import { useSiteConfig } from '@/context/SiteConfig';
 import { Reveal } from '@/components/common/Reveal';
 
@@ -20,13 +21,13 @@ const arcPath = (y: number) => {
   return `M${NODE_X} ${y} Q${cx} ${cy} ${INDIA.x} ${INDIA.y}`;
 };
 
-function CorridorDiagram({ active }: { active: string | null }) {
+function CorridorDiagram({ active, markets }: { active: string | null; markets: Market[] }) {
   return (
     <svg
       viewBox={`0 0 ${VIEW.w} ${VIEW.h}`}
       className="absolute inset-0 h-full w-full"
       role="img"
-      aria-label="Diagram of market corridors connecting North America, the United Kingdom and Europe, the Middle East, Japan and East Asia, Southeast Asia, and Australia with India."
+      aria-label={`Diagram of market corridors connecting ${markets.map((m) => m.name).join(', ')} with India.`}
     >
       <defs>
         <linearGradient id="arc-grad" x1="0" x2="1">
@@ -130,15 +131,15 @@ export function Markets() {
             className="media-frame order-1 aspect-[10/7] rounded-lg bg-orange-soft lg:order-2 lg:col-span-7 lg:col-start-6"
           >
             <div data-diagram className="absolute inset-0">
-              <img src={config.media.markets || earth} alt="" width={2000} height={1331} loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover opacity-45" />
+              <img src={config.media.markets} alt="" width={2000} height={1331} loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover opacity-45" />
               <div aria-hidden className="absolute inset-0 bg-linear-to-r from-ink/85 via-ink/55 to-ink/30" />
-              <CorridorDiagram active={active} />
+              <CorridorDiagram active={active} markets={config.markets} />
               <p className="eyebrow absolute bottom-5 left-5 text-white/60 md:bottom-7 md:left-7">Corridors into India</p>
             </div>
           </Reveal>
 
           <ol className="order-2 border-t border-line lg:order-1 lg:col-span-5" onMouseLeave={() => setActive(null)}>
-            {markets.map((m, i) => (
+            {config.markets.map((m, i) => (
               <Reveal
                 as="li"
                 key={m.id}

@@ -1,3 +1,5 @@
+'use client';
+
 import { useSiteConfig } from '@/context/SiteConfig';
 import { Section } from '@/components/common/Section';
 import { Container } from '@/components/common/Container';

@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, type FormEvent, type ReactNode } from 'react';
 import { Mail, MapPin } from 'lucide-react';
 import { useSiteConfig } from '@/context/SiteConfig';
@@ -145,7 +147,7 @@ export function Contact() {
 
               <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
                 <p id="contact-note" className="max-w-xs text-small text-text-muted">
-                  Submitting opens your email app with your enquiry ready to send.
+                  {config.contact.formNote}
                 </p>
                 <Button type="submit" className="self-start sm:self-auto">
                   Send enquiry

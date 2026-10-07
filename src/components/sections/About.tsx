@@ -1,25 +1,16 @@
-import aboutImage from '@/assets/images/about-mumbai.webp';
+'use client';
+
 import { Section } from '@/components/common/Section';
 import { Container } from '@/components/common/Container';
 import { SectionHeading } from '@/components/common/SectionHeading';
 import { useSiteConfig } from '@/context/SiteConfig';
+import { PortableText, type PortableTextComponents } from '@portabletext/react';
 import { Reveal } from '@/components/common/Reveal';
 import { Leadership } from '@/components/sections/Leadership';
 
-const pillars = [
-  {
-    name: 'Capital',
-    text: 'Connecting capital providers with credible India opportunities, and businesses with the right capital partners.',
-  },
-  {
-    name: 'Capability',
-    text: 'Bringing the sector, operational and policy depth needed to turn investment into enterprise.',
-  },
-  {
-    name: 'Execution',
-    text: 'Staying through delivery, so partnerships, supply chains and transformation create measurable value.',
-  },
-];
+const aboutComponents: PortableTextComponents = {
+  marks: { strong: ({ children }) => <strong className="font-medium text-ink">{children}</strong> },
+};
 
 export function About() {
   const { config } = useSiteConfig();
@@ -38,7 +29,7 @@ export function About() {
           <div className="lg:col-span-4">
           <Reveal variant="clip" className="media-frame aspect-[4/5] rounded-md lg:sticky lg:top-[calc(var(--spacing-header-compact)+2rem)]">
             <img
-              src={config.media.about || aboutImage}
+              src={config.media.about}
               alt="The Gateway of India, Mumbai, at sunset"
               width={1100}
               height={1466}
@@ -50,26 +41,11 @@ export function About() {
 
           <div className="lg:col-span-7 lg:col-start-6">
             <Reveal stagger className="space-y-6 text-body-lg text-text-secondary">
-              <p>
-                <strong className="font-medium text-ink">Mahesh Palashikar Advisory Services (mpas)</strong> provides
-                senior-led strategic guidance to decision-makers navigating high-stakes industrial and capital
-                decisions in India.
-              </p>
-              <p>
-                We bring over 125 years of combined executive leadership experience across global industrial, energy,
-                technology, and capital sectors. Built upon a foundation of proven leadership—including extensive
-                tenures shaping global industrial enterprises and chairing NSE-listed company boards—mpas operates at
-                the intersection of strategy, capital, partnerships, and execution.
-              </p>
-              <p>
-                We deploy a lean, agile operating model. This ensures our clients engage directly with seasoned
-                practitioners possessing deep domain expertise and extensive relationships across India’s regulatory,
-                public sector, and industrial ecosystems.
-              </p>
+              <PortableText value={config.about.body} components={aboutComponents} />
             </Reveal>
 
             <ol className="mt-14 border-t border-line md:mt-20">
-              {pillars.map((p, i) => (
+              {config.about.pillars.map((p, i) => (
                 <Reveal
                   as="li"
                   key={p.name}

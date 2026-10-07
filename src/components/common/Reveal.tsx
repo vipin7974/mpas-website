@@ -1,3 +1,5 @@
+'use client';
+
 import { createElement, useRef, type ElementType, type ReactNode } from 'react';
 import { gsap, motion, SplitText } from '@/lib/gsap';
 import { useGsap } from '@/hooks/useGsap';

@@ -1,7 +1,8 @@
-import { useRef, type RefObject } from 'react';
-import logo from '@/assets/branding/mpas-logo-horizontal.png';
+'use client';
+
+import { useMemo, useRef, type RefObject } from 'react';
 import { useSiteConfig } from '@/context/SiteConfig';
-import { navigation, contactNav, sectionIds, anchor } from '@/data/navigation';
+import { useAnchor } from '@/hooks/useAnchor';
 import { useScrolled, useOverDark } from '@/hooks/useScrolled';
 import { useActiveSection } from '@/hooks/useActiveSection';
 import { useGsap } from '@/hooks/useGsap';
@@ -21,6 +22,12 @@ export function Header({ menuOpen, onOpenMenu, menuButtonRef }: HeaderProps) {
   const { config } = useSiteConfig();
   const scrolled = useScrolled(24);
   const onDark = useOverDark();
+  const anchor = useAnchor();
+  const navItems = config.nav.items;
+  const sectionIds = useMemo(
+    () => [...navItems.map((n) => n.href), config.nav.contact.href].filter((h) => h.startsWith('#')).map((h) => h.slice(1)),
+    [navItems, config.nav.contact.href],
+  );
   const active = useActiveSection(sectionIds);
   const ready = useReady();
   const ref = useRef<HTMLElement>(null);
@@ -68,7 +75,7 @@ export function Header({ menuOpen, onOpenMenu, menuButtonRef }: HeaderProps) {
             aria-label="Mahesh Palashikar Advisory Services — back to top"
           >
             <img
-              src={config.brand.logo || logo}
+              src={config.brand.logo}
               alt="mpas"
               width={956}
               height={193}
@@ -82,12 +89,13 @@ export function Header({ menuOpen, onOpenMenu, menuButtonRef }: HeaderProps) {
 
           <nav aria-label="Primary" className="hidden lg:block">
             <ul className="flex items-center gap-1 xl:gap-2">
-              {navigation.map((item) => {
-                const isActive = active === item.id;
+              {navItems.map((item) => {
+                const isActive = active === item.href.slice(1);
                 return (
                   <li key={item.id} data-header-item>
                     <a
                       href={anchor(item.href)}
+                      {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                       aria-current={isActive ? 'true' : undefined}
                       className={cn(
                         'group relative block rounded-xs px-3 py-2 font-outfit text-[0.9375rem] transition-colors duration-300',
@@ -125,8 +133,8 @@ export function Header({ menuOpen, onOpenMenu, menuButtonRef }: HeaderProps) {
 
           <div className="flex items-center gap-2" data-header-item>
             <span className="hidden md:block">
-              <Button href={anchor(contactNav.href)} variant={onDark ? 'inverse' : 'primary'} className="h-11 px-5 text-small">
-                Contact Us
+              <Button href={anchor(config.nav.contact.href)} variant={onDark ? 'inverse' : 'primary'} className="h-11 px-5 text-small">
+                {config.nav.contact.label}
               </Button>
             </span>
 

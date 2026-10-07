@@ -1,5 +1,6 @@
+'use client';
+
 import { useRef } from 'react';
-import quoteImage from '@/assets/images/quote-grid.webp';
 import { useGsap } from '@/hooks/useGsap';
 import { useSiteConfig } from '@/context/SiteConfig';
 import { gsap } from '@/lib/gsap';
@@ -34,7 +35,7 @@ export function QuoteSection() {
     >
       <div data-parallax aria-hidden className="absolute inset-x-0 -top-[12%] h-[124%]">
         <img
-          src={config.media.quote || quoteImage}
+          src={config.media.quote}
           alt=""
           width={2200}
           height={1467}
@@ -55,12 +56,12 @@ export function QuoteSection() {
           <div className="lg:col-span-10">
             <blockquote>
               <Reveal as="p" variant="lines" className="font-outfit text-h1 font-extralight text-white">
-                Value is created only when capital and capability come together, and are carried through to execution.
+                {config.quote.text}
               </Reveal>
             </blockquote>
             <Reveal as="figcaption" delay={0.2} className="mt-10 flex items-center gap-4 md:mt-14">
               <span aria-hidden className="bridge-rule w-12" />
-              <span className="eyebrow text-white/75">The mpas philosophy</span>
+              <span className="eyebrow text-white/75">{config.quote.caption}</span>
             </Reveal>
           </div>
         </figure>

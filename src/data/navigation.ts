@@ -14,9 +14,3 @@ export const navigation: NavItem[] = [
 export const contactNav: NavItem = { id: 'contact', label: 'Contact', href: '#contact' };
 
 export const sectionIds = [...navigation.map((n) => n.id), contactNav.id] as const;
-
-/** True on the home page; false on standalone pages such as /leadership/:slug. */
-export const isHome = () => window.location.pathname === '/' || window.location.pathname === '';
-
-/** In-page anchors must point back to the home page when viewed from a standalone page. */
-export const anchor = (href: string) => (isHome() ? href : `/${href}`);

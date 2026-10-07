@@ -1,11 +1,16 @@
+'use client';
+
 import { useRef } from 'react';
-import heroImage from '@/assets/images/mumbai_bridge.webp';
 import { useGsap } from '@/hooks/useGsap';
 import { gsap } from '@/lib/gsap';
 import { useReady } from '@/lib/ready';
 import { Container } from '@/components/common/Container';
 import { useSiteConfig } from '@/context/SiteConfig';
 import { Button } from '@/components/common/Button';
+import { useAnchor } from '@/hooks/useAnchor';
+import type { Cta } from '@/sanity/types';
+
+const extern = (c: Cta) => (c.external ? { target: '_blank', rel: 'noopener noreferrer' } : {});
 
 /** Soft angled planes echoing the brand book cover. Purely decorative. */
 function HeroPlanes() {
@@ -30,6 +35,7 @@ export function Hero() {
   const ref = useRef<HTMLElement>(null);
   const ready = useReady();
   const { config } = useSiteConfig();
+  const anchor = useAnchor();
 
   useGsap(
     ({ scope }) => {
@@ -112,10 +118,16 @@ export function Hero() {
               {config.hero.description}
             </p>
             <div data-hero-fade className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4 md:mt-10">
-              <Button href="#what-we-do">{config.hero.primaryCta}</Button>
-              <Button href="#contact" variant="link">
-                Talk to us
-              </Button>
+              {config.hero.primary && (
+                <Button href={anchor(config.hero.primary.href)} {...extern(config.hero.primary)}>
+                  {config.hero.primary.label}
+                </Button>
+              )}
+              {config.hero.secondary && (
+                <Button href={anchor(config.hero.secondary.href)} variant="link" {...extern(config.hero.secondary)}>
+                  {config.hero.secondary.label}
+                </Button>
+              )}
             </div>
           </div>
         </div>
@@ -129,8 +141,8 @@ export function Hero() {
               <div data-hero-img-wrap className="absolute inset-x-0 -top-[8%] h-[116%]">
                 <img
                   data-hero-img
-                  src={config.media.hero || heroImage}
-                  alt="Glass office towers rising into a clear sky"
+                  src={config.media.hero}
+                  alt={config.media.heroAlt}
                   width={2200}
                   height={1467}
                   fetchPriority="high"
@@ -144,8 +156,8 @@ export function Hero() {
                 data-hero-fade
                 className="absolute bottom-0 left-0 flex w-full items-end justify-between gap-4 p-5 text-white md:p-8"
               >
-                <span className="eyebrow">Strategy · Partnerships · Execution</span>
-                <span className="eyebrow hidden sm:inline">For Viksit Bharat</span>
+                <span className="eyebrow">{config.hero.captionLeft}</span>
+                <span className="eyebrow hidden sm:inline">{config.hero.captionRight}</span>
               </div>
             </div>
           </figure>

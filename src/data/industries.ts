@@ -1,9 +1,9 @@
-import manufacturing from '@/assets/images/industry-manufacturing.webp';
-import energy from '@/assets/images/industry-energy.webp';
-import infrastructure from '@/assets/images/industry-infrastructure.webp';
-import logistics from '@/assets/images/industry-logistics.webp';
-import technology from '@/assets/images/industry-technology.webp';
-import critical from '@/assets/images/markets-earth.webp';
+const manufacturing = '/images/industry-manufacturing.webp';
+const energy = '/images/industry-energy.webp';
+const infrastructure = '/images/industry-infrastructure.webp';
+const logistics = '/images/industry-logistics.webp';
+const technology = '/images/industry-technology.webp';
+const critical = '/images/markets-earth.webp';
 
 export interface Industry {
   id: string;
