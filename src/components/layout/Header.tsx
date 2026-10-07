@@ -1,7 +1,7 @@
 import { useRef, type RefObject } from 'react';
 import logo from '@/assets/branding/mpas-logo-horizontal.png';
 import { useSiteConfig } from '@/context/SiteConfig';
-import { navigation, contactNav, sectionIds } from '@/data/navigation';
+import { navigation, contactNav, sectionIds, anchor } from '@/data/navigation';
 import { useScrolled, useOverDark } from '@/hooks/useScrolled';
 import { useActiveSection } from '@/hooks/useActiveSection';
 import { useGsap } from '@/hooks/useGsap';
@@ -62,7 +62,7 @@ export function Header({ menuOpen, onOpenMenu, menuButtonRef }: HeaderProps) {
           )}
         >
           <a
-            href="#top"
+            href={anchor('#top')}
             data-header-item
             className="shrink-0 rounded-xs"
             aria-label="Mahesh Palashikar Advisory Services — back to top"
@@ -87,7 +87,7 @@ export function Header({ menuOpen, onOpenMenu, menuButtonRef }: HeaderProps) {
                 return (
                   <li key={item.id} data-header-item>
                     <a
-                      href={item.href}
+                      href={anchor(item.href)}
                       aria-current={isActive ? 'true' : undefined}
                       className={cn(
                         'group relative block rounded-xs px-3 py-2 font-outfit text-[0.9375rem] transition-colors duration-300',
@@ -125,7 +125,7 @@ export function Header({ menuOpen, onOpenMenu, menuButtonRef }: HeaderProps) {
 
           <div className="flex items-center gap-2" data-header-item>
             <span className="hidden md:block">
-              <Button href={contactNav.href} variant={onDark ? 'inverse' : 'primary'} className="h-11 px-5 text-small">
+              <Button href={anchor(contactNav.href)} variant={onDark ? 'inverse' : 'primary'} className="h-11 px-5 text-small">
                 Contact Us
               </Button>
             </span>

@@ -2,7 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState, type RefObject } from 're
 import { ArrowUpRight, X } from 'lucide-react';
 import logo from '@/assets/branding/mpas-logo-horizontal.png';
 import { useSiteConfig } from '@/context/SiteConfig';
-import { navigation, contactNav } from '@/data/navigation';
+import { navigation, contactNav, anchor } from '@/data/navigation';
 import { gsap, prefersReducedMotion } from '@/lib/gsap';
 import { Container } from '@/components/common/Container';
 
@@ -142,7 +142,7 @@ export function MobileMenu({ open, onClose, returnFocusRef }: MobileMenuProps) {
                 <div className="overflow-hidden">
                   <a
                     data-menu-link
-                    href={item.href}
+                    href={anchor(item.href)}
                     onClick={onClose}
                     className="group flex items-baseline gap-4 py-3.5 font-outfit text-[clamp(1.875rem,1.2rem+3.4vw,3.25rem)] font-light leading-tight tracking-[-0.02em] text-ink md:py-4"
                   >

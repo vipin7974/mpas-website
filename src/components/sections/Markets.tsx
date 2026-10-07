@@ -117,7 +117,7 @@ export function Markets() {
     <Section ref={ref} id="markets" labelledBy="markets-title">
       <Container>
         <SectionHeading
-          index="06"
+          index="04"
           label={config.sectionHeadings['markets'].label}
           titleId="markets-title"
           title={config.sectionHeadings['markets'].title}

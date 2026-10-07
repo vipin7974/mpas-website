@@ -1,7 +1,7 @@
 {
   "name": "mpas-website",
   "version": "1.0.0",
-  "description": "MPAS | Mahesh Palashikar Advisory Services — corporate website",
+  "description": "mpas | Mahesh Palashikar Advisory Services — corporate website",
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit -p tsconfig.json && vite build",

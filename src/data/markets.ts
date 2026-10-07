@@ -15,28 +15,3 @@ export const markets: Market[] = [
   { id: 'southeast-asia', name: 'Southeast Asia', short: 'Southeast Asia', focus: 'Trade corridors and regional expansion' },
   { id: 'oceania', name: 'Australia & Oceania', short: 'Oceania', focus: 'Critical minerals, education and agri-food' },
 ];
-
-export interface Audience {
-  title: string;
-  description: string;
-}
-
-/** Who mpas works with (brand book, 01 / About Us). */
-export const audiences: Audience[] = [
-  {
-    title: 'Corporates',
-    description: 'Global and Indian businesses shaping their India strategy, entry or next phase of scale.',
-  },
-  {
-    title: 'Capital Providers',
-    description: 'Investors and financial institutions seeking credible, execution-ready opportunities.',
-  },
-  {
-    title: 'Government Bodies',
-    description: 'Public institutions attracting investment and building industrial capability.',
-  },
-  {
-    title: 'Industry Stakeholders',
-    description: 'Associations, ecosystems and partners driving sector-wide value creation.',
-  },
-];

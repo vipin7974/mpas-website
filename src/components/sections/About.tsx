@@ -1,10 +1,10 @@
 import aboutImage from '@/assets/images/about-mumbai.webp';
-import symbol from '@/assets/branding/mpas-symbol.png';
 import { Section } from '@/components/common/Section';
 import { Container } from '@/components/common/Container';
 import { SectionHeading } from '@/components/common/SectionHeading';
 import { useSiteConfig } from '@/context/SiteConfig';
 import { Reveal } from '@/components/common/Reveal';
+import { Leadership } from '@/components/sections/Leadership';
 
 const pillars = [
   {
@@ -51,15 +51,20 @@ export function About() {
           <div className="lg:col-span-7 lg:col-start-6">
             <Reveal stagger className="space-y-6 text-body-lg text-text-secondary">
               <p>
-                <strong className="font-medium text-ink">Mahesh Palashikar Advisory Services (mpas)</strong> is a
-                strategic advisory firm dedicated to Bridging Capital, Capability and Execution for Viksit Bharat. Led
-                by a senior leadership team with deep cross-sector expertise, we work with corporates, capital
-                providers, government bodies, and industry stakeholders to shape India strategy, unlock strategic
-                partnerships, and drive execution-led value creation.
+                <strong className="font-medium text-ink">Mahesh Palashikar Advisory Services (mpas)</strong> provides
+                senior-led strategic guidance to decision-makers navigating high-stakes industrial and capital
+                decisions in India.
               </p>
               <p>
-                From boardroom advisory to supply chain optimization and decarbonization, mpas helps stakeholders
-                navigate India’s growth story with clarity, credibility, and impact.
+                We bring over 125 years of combined executive leadership experience across global industrial, energy,
+                technology, and capital sectors. Built upon a foundation of proven leadership—including extensive
+                tenures shaping global industrial enterprises and chairing NSE-listed company boards—mpas operates at
+                the intersection of strategy, capital, partnerships, and execution.
+              </p>
+              <p>
+                We deploy a lean, agile operating model. This ensures our clients engage directly with seasoned
+                practitioners possessing deep domain expertise and extensive relationships across India’s regulatory,
+                public sector, and industrial ecosystems.
               </p>
             </Reveal>
 
@@ -81,17 +86,9 @@ export function About() {
                 </Reveal>
               ))}
             </ol>
-
-            <Reveal className="mt-14 flex items-start gap-6 rounded-md bg-surface p-6 md:mt-20 md:p-8">
-              <img src={symbol} alt="" width={342} height={199} loading="lazy" className="mt-1 h-8 w-auto shrink-0 md:h-10" />
-              <p className="text-small text-text-secondary">
-                Our identity centres on a bridge, a symbol of{' '}
-                <span className="text-ink">connection, partnership and progress</span>. It links Capital with
-                Capability, reflecting our belief that value is created only when both come together.
-              </p>
-            </Reveal>
           </div>
         </div>
+        <Leadership />
       </Container>
     </Section>
   );

@@ -11,7 +11,7 @@ export function Industries() {
     <Section id="industries" tone="surface" labelledBy="industries-title" className="overflow-hidden">
       <Container>
         <SectionHeading
-          index="04"
+          index="03"
           label={config.sectionHeadings['industries'].label}
           titleId="industries-title"
           title={config.sectionHeadings['industries'].title}

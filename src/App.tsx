@@ -8,6 +8,7 @@ import { Loader } from '@/components/layout/Loader';
 import { ScrollProgress } from '@/components/layout/ScrollProgress';
 import { Home } from '@/pages/Home';
 import { Admin } from '@/pages/Admin';
+import { Profile, profileSlug } from '@/pages/Profile';
 import { SiteConfigProvider } from '@/context/SiteConfig';
 
 export default function App() {
@@ -17,7 +18,15 @@ export default function App() {
 
   const openMenu = useCallback(() => setMenuOpen(true), []);
   const closeMenu = useCallback(() => setMenuOpen(false), []);
+  const slug = profileSlug();
   const onLoaded = useCallback(() => setReady(true), []);
+
+  // Deep links such as /#leadership arrive before the sections exist; scroll once the intro is done.
+  useEffect(() => {
+    if (!ready || !window.location.hash) return;
+    const el = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+    if (el) requestAnimationFrame(() => el.scrollIntoView());
+  }, [ready]);
 
   // Recalculate trigger positions once images and fonts have settled.
   useEffect(() => {
@@ -45,7 +54,7 @@ export default function App() {
       <Header menuOpen={menuOpen} onOpenMenu={openMenu} menuButtonRef={menuButtonRef} />
       <MobileMenu open={menuOpen} onClose={closeMenu} returnFocusRef={menuButtonRef} />
       <main id="main" tabIndex={-1} className="outline-none">
-        <Home />
+        {slug ? <Profile slug={slug} /> : <Home />}
       </main>
       <Footer />
     </ReadyContext.Provider></SiteConfigProvider>

@@ -3,7 +3,7 @@ import energy from '@/assets/images/industry-energy.webp';
 import infrastructure from '@/assets/images/industry-infrastructure.webp';
 import logistics from '@/assets/images/industry-logistics.webp';
 import technology from '@/assets/images/industry-technology.webp';
-import agri from '@/assets/images/industry-agri.webp';
+import critical from '@/assets/images/markets-earth.webp';
 
 export interface Industry {
   id: string;
@@ -50,10 +50,10 @@ export const industries: Industry[] = [
     imageAlt: 'Engineer working in an automation laboratory',
   },
   {
-    id: 'agri',
-    name: 'Agriculture & Food',
-    description: 'Value-chain partnerships that connect farm, processing and market.',
-    image: agri,
-    imageAlt: 'Wheat field at sunrise',
+    id: 'critical',
+    name: 'Critical Industries',
+    description: 'Aerospace, defense, healthcare, and medical technology.',
+    image: critical,
+    imageAlt: 'Critical industries',
   },
 ];

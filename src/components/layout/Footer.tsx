@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { ArrowUp } from 'lucide-react';
 import logo from '@/assets/branding/mpas-logo-horizontal.png';
 import { useSiteConfig } from '@/context/SiteConfig';
-import { navigation, contactNav } from '@/data/navigation';
+import { navigation, contactNav, anchor } from '@/data/navigation';
 
 import { Container } from '@/components/common/Container';
 import { Button } from '@/components/common/Button';
@@ -46,7 +46,7 @@ export function Footer() {
               Viksit Bharat.
             </Reveal>
             <div className="mt-10">
-              <Button href={contactNav.href} variant="outline-inverse">
+              <Button href={anchor(contactNav.href)} variant="outline-inverse">
                 Start a conversation
               </Button>
             </div>
@@ -56,17 +56,17 @@ export function Footer() {
             <FooterColumn title="Explore">
               {navigation.map((item) => (
                 <li key={item.id}>
-                  <a href={item.href} className={linkClass}>
+                  <a href={anchor(item.href)} className={linkClass}>
                     {item.label}
                   </a>
                 </li>
               ))}
             </FooterColumn>
 
-            <FooterColumn title="What We Do">
+            <FooterColumn title="Strategic Capabilities">
               {services.map((s) => (
                 <li key={s.id}>
-                  <a href="#what-we-do" className={linkClass}>
+                  <a href={anchor('#what-we-do')} className={linkClass}>
                     {s.title}
                   </a>
                 </li>
@@ -81,7 +81,7 @@ export function Footer() {
               </li>
               <li className="text-small text-white/80">{site.location}</li>
               <li>
-                <a href={contactNav.href} className={linkClass}>
+                <a href={anchor(contactNav.href)} className={linkClass}>
                   Enquiry form
                 </a>
               </li>

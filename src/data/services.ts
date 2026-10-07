@@ -1,7 +1,7 @@
 import serviceIndia from '@/assets/images/service-india.webp';
 import servicePartnerships from '@/assets/images/service-partnerships.webp';
-import serviceSupplyChain from '@/assets/images/service-supply-chain.webp';
-import serviceDecarbonization from '@/assets/images/service-decarbonization.webp';
+import commercial from '@/assets/images/hero.webp';
+import boardroom from '@/assets/images/expertise-boardroom.webp';
 
 export interface Service {
   id: string;
@@ -14,59 +14,39 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: 'india-strategy',
-    title: 'Boardroom & India Strategy',
+    id: 'india-market-strategy',
+    title: 'India Market Strategy & Intelligence',
     summary:
-      'Board-level counsel to shape a clear, credible India strategy — where to play, how to enter and how to win over the long term.',
-    points: [
-      'India entry and expansion strategy',
-      'Market, policy and regulatory assessment',
-      'Location and footprint planning',
-      'Board and leadership advisory',
-    ],
+      'Advising global enterprises and private equity investors on market entry, expansion, and investment decisions. We deliver actionable intelligence, competitive opportunity assessments, and comprehensive strategic research to validate market viability.',
+    points: [],
     image: serviceIndia,
     imageAlt: 'India Gate in New Delhi at dusk',
   },
   {
-    id: 'partnerships-capital',
-    title: 'Strategic Partnerships & Capital',
+    id: 'strategic-partnerships',
+    title: 'Strategic Partnerships & Ecosystem Access',
     summary:
-      'Unlocking the right partnerships and the right capital — connecting investors, corporates and institutions around opportunities that hold up.',
-    points: [
-      'Partner identification and due diligence',
-      'Joint venture and alliance structuring',
-      'Capital provider and investor connect',
-      'Transaction and negotiation support',
-    ],
+      'Connecting institutional clients with critical stakeholders, including regulators, technology partners, EPCs, PMCs, and advanced supply chain networks. We evaluate prospective partners and facilitate strategic discussions to accelerate collaboration.',
+    points: [],
     image: servicePartnerships,
     imageAlt: 'Advisors reviewing documents together at a desk',
   },
   {
-    id: 'supply-chain',
-    title: 'Supply Chain Optimization',
+    id: 'commercial-structuring',
+    title: 'Commercial Structuring & Transactions',
     summary:
-      'Building resilient, cost-competitive supply chains that position India as a sourcing and manufacturing hub.',
-    points: [
-      'Supply chain diagnostics and redesign',
-      'Supplier and vendor ecosystem development',
-      'Manufacturing and localisation strategy',
-      'Logistics and network optimization',
-    ],
-    image: serviceSupplyChain,
-    imageAlt: 'Container ship carrying cargo at sea',
+      'Providing strategic advisory throughout the development of joint ventures, alliances, and market entry operating models. Our partners facilitate commercial negotiations and provide strategic input on technology transfer and licensing arrangements (TALAs).',
+    points: [],
+    image: commercial,
+    imageAlt: 'Glass office towers seen from street level',
   },
   {
-    id: 'decarbonization',
-    title: 'Decarbonization & Sustainability',
+    id: 'board-advisory',
+    title: 'Board Advisory & Executive Leadership',
     summary:
-      'Turning climate commitments into bankable, executable programmes aligned with India’s energy transition.',
-    points: [
-      'Decarbonization roadmaps and targets',
-      'Energy transition and renewables strategy',
-      'Green finance and project structuring',
-      'Implementation and progress tracking',
-    ],
-    image: serviceDecarbonization,
-    imageAlt: 'Wind turbines across open fields at sunset',
+      'Strengthening corporate governance and providing strategic decision support for boards, CEOs, and executive leadership teams. We assist leadership in solving complex industrial, organizational, and transactional challenges.',
+    points: [],
+    image: boardroom,
+    imageAlt: 'Leadership team in discussion around a boardroom table',
   },
 ];

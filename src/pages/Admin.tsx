@@ -119,7 +119,6 @@ export function Admin() {
             <div className="grid gap-5 md:grid-cols-2">
               <Card title="Hero"><ImagePicker label="Hero image" value={config.media.hero} onChange={v=>update({media:{...config.media,hero:v}})} /></Card>
               <Card title="About"><ImagePicker label="About image" value={config.media.about} onChange={v=>update({media:{...config.media,about:v}})} /></Card>
-              <Card title="Expertise"><ImagePicker label="Expertise image" value={config.media.expertise} onChange={v=>update({media:{...config.media,expertise:v}})} /></Card>
               <Card title="Philosophy"><ImagePicker label="Quote background" value={config.media.quote} onChange={v=>update({media:{...config.media,quote:v}})} /></Card>
               <Card title="Markets"><ImagePicker label="Markets background" value={config.media.markets} onChange={v=>update({media:{...config.media,markets:v}})} /></Card>
             </div>

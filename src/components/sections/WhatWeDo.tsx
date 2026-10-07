@@ -11,6 +11,7 @@ import { cn } from '@/lib/utils';
 function ServiceCard({ service, index }: { service: Service; index: number }) {
   const [open, setOpen] = useState(false);
   const panelId = useId();
+  const hasPoints = service.points.length > 0;
 
   return (
     <article className="group">
@@ -33,6 +34,8 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
         <h3 className="font-outfit text-h2 font-light text-ink">{service.title}</h3>
         <p className="mt-4 max-w-lg text-text-secondary">{service.summary}</p>
 
+        {hasPoints && (
+          <>
         <div
           id={panelId}
           className={cn(
@@ -70,6 +73,8 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
             />
           </span>
         </button>
+          </>
+        )}
       </Reveal>
     </article>
   );
@@ -82,7 +87,7 @@ export function WhatWeDo() {
     <Section id="what-we-do" labelledBy="what-we-do-title">
       <Container>
         <SectionHeading
-          index="03"
+          index="02"
           label={config.sectionHeadings['what-we-do'].label}
           titleId="what-we-do-title"
           title={config.sectionHeadings['what-we-do'].title}

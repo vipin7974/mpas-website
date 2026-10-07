@@ -75,7 +75,7 @@ export function Contact() {
           <div className="lg:col-span-5">
             <SectionHeading
               layout="stacked"
-              index="07"
+              index="05"
               label={config.sectionHeadings['contact'].label}
               titleId="contact-title"
               title={config.sectionHeadings['contact'].title}
