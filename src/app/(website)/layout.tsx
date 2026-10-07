@@ -8,6 +8,7 @@ import { getSiteContent } from '@/sanity/content';
 import { siteUrl } from '@/sanity/env';
 import { SiteConfigProvider } from '@/context/SiteConfig';
 import { SiteShell } from '@/components/layout/SiteShell';
+import { LiveRefresh } from '@/components/layout/LiveRefresh';
 
 export const viewport: Viewport = { themeColor: '#F6F6F3' };
 
@@ -43,6 +44,7 @@ export default async function WebsiteLayout({ children }: { children: React.Reac
         <SiteConfigProvider content={content}>
           <SiteShell>{children}</SiteShell>
         </SiteConfigProvider>
+        <LiveRefresh />
         {isEnabled && <VisualEditing />}
         <noscript>
           <p style={{ fontFamily: 'sans-serif', padding: '2rem' }}>
