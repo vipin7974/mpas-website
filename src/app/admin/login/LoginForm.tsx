@@ -2,7 +2,7 @@
 
 import { useEffect, useState, type FormEvent } from 'react';
 
-const colors = { canvas: '#f7f3ea', ink: '#18352a', green: '#245b3a', orange: '#e07832', orangeRed: '#c95d24', line: '#d9d2c3', muted: '#536158' };
+const colors = { canvas: '#f7f3ea', ink: '#18352a', green: '#39b54a', orange: '#e07832', orangeRed: '#c95d24', line: '#d9d2c3', muted: '#536158' };
 
 export function LoginForm() {
   const [csrf, setCsrf] = useState('');

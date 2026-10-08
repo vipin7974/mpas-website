@@ -100,7 +100,7 @@ export const defaultContent: SiteContent = {
   services,
   markets,
   leaders: defaultLeaders,
-  media: { hero: '/images/mumbai_bridge.webp', heroAlt: 'Glass office towers rising into a clear sky', about: '/images/about-mumbai.webp', quote: '/images/quote-grid.webp', markets: '/images/markets-earth.webp' },
+  media: { hero: '/images/mumbai_bridge.webp', heroAlt: 'Glass office towers rising into a clear sky', about: '/images/service-supply-chain.webp', quote: '/images/quote-grid.webp', markets: '/images/markets-earth.webp' },
   seo: {
     title: 'mpas | Mahesh Palashikar Advisory Services',
     description:

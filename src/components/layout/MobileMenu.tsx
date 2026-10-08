@@ -146,18 +146,18 @@ export function MobileMenu({ open, onClose, returnFocusRef }: MobileMenuProps) {
                     href={anchor(item.href)}
                     {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                     onClick={onClose}
-                    className="group flex items-baseline gap-4 py-3.5 font-outfit text-[clamp(1.875rem,1.2rem+3.4vw,3.25rem)] font-light leading-tight tracking-[-0.02em] text-ink md:py-4"
+                    className="group flex items-baseline gap-4 py-3.5 font-outfit text-[clamp(1.5rem,1.1rem+2.6vw,3rem)] font-light leading-tight tracking-[-0.02em] text-ink md:py-4"
                   >
-                    <span className="w-7 font-outfit text-micro font-medium tracking-[0.14em] text-mpas-green-dark">
+                    <span className="w-7 shrink-0 font-outfit text-micro font-medium tracking-[0.14em] text-mpas-green-dark">
                       {String(i + 1).padStart(2, '0')}
                     </span>
-                    <span className="transition-transform duration-500 ease-expo group-hover:translate-x-2 group-focus-visible:translate-x-2">
+                    <span className="min-w-0 transition-transform duration-500 ease-expo group-hover:translate-x-2 group-focus-visible:translate-x-2">
                       {item.label}
                     </span>
                     <ArrowUpRight
                       aria-hidden
                       strokeWidth={1.25}
-                      className="ml-auto size-6 self-center text-text-muted opacity-0 transition-all duration-500 ease-expo group-hover:opacity-100 group-focus-visible:opacity-100"
+                      className="ml-auto size-6 shrink-0 self-center text-text-muted opacity-0 transition-all duration-500 ease-expo group-hover:opacity-100 group-focus-visible:opacity-100"
                     />
                   </a>
                 </div>

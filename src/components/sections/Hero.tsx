@@ -94,18 +94,18 @@ export function Hero() {
               </p>
 
               <h1 id="hero-title" className="font-outfit text-hero text-ink">
-                <span className="block overflow-hidden pb-[0.06em]">
+                <span className="block overflow-hidden pb-[0.2em] -mb-[0.14em]">
                   <span data-hero-line className="block font-extralight text-text-secondary">
                     {config.hero.lines[0]}
                   </span>
                 </span>
-                <span className="block overflow-hidden pb-[0.06em]">
-                  <span data-hero-line className="block font-normal">
+                <span className="block overflow-hidden pb-[0.2em] -mb-[0.14em]">
+                  <span data-hero-line className="block font-light text-ink">
                     {config.hero.lines[1]}
                   </span>
                 </span>
-                <span className="block overflow-hidden pb-[0.08em]">
-                  <span data-hero-line className="block font-normal">
+                <span className="block overflow-hidden pb-[0.2em] -mb-[0.14em]">
+                  <span data-hero-line className="block font-light text-ink">
                     {config.hero.lines[2].replace(/\.$/, '')}
                     <span className="text-mpas-orange-red">.</span>
                   </span>

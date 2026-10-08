@@ -18,7 +18,7 @@ export function Monogram({ initials, photo, className }: { initials: string; pho
     <span
       aria-hidden
       className={cn(
-        'flex shrink-0 items-center justify-center rounded-full bg-mpas-green-dark font-outfit font-light tracking-[0.04em] text-white ring-1 ring-line transition-transform duration-700 ease-expo group-hover:scale-[1.04]',
+        'flex shrink-0 items-center justify-center rounded-full bg-mpas-green font-outfit font-light tracking-[0.04em] text-ink ring-1 ring-line transition-transform duration-700 ease-expo group-hover:scale-[1.04]',
         className,
       )}
     >

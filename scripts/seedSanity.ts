@@ -97,7 +97,7 @@ async function main() {
     about: {
       heading: heading('about'),
       body: c.about.body,
-      image: await image(c.media.about, 'The Gateway of India, Mumbai, at sunset'),
+      image: await image(c.media.about, 'A container ship loaded with cargo at sea'),
       pillars: c.about.pillars.map((p, i) => ({ _type: 'object', _key: `pillar${i}`, ...p })),
     },
     leadership: { show: true, label: c.sectionHeadings.leadership.label, members: leaderIds.map((id, i) => ref(id, `m${i}`)) },

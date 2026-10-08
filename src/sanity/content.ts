@@ -43,6 +43,14 @@ const initialsOf = (name: string) =>
 const paragraphsOf = (blocks: PortableTextBlock[] | undefined): string[] =>
   arr<any>(blocks).map((b) => arr<any>(b.children).map((c) => c.text ?? '').join('')).filter(Boolean);
 
+/** Keeps a Leadership link in the menu even when the CMS navigation predates it. */
+function withLeadership(items: NavLink[]): NavLink[] {
+  if (items.some((i) => i.href === '#leadership')) return items;
+  const entry: NavLink = { id: 'leadership', label: 'Leadership', href: '#leadership', external: false };
+  const at = items.findIndex((i) => i.href === '#about') + 1;
+  return [...items.slice(0, at), entry, ...items.slice(at)];
+}
+
 function mapContent(raw: Raw): SiteContent {
   const d = defaultContent;
   const s = raw.settings ?? {};
@@ -122,7 +130,7 @@ function mapContent(raw: Raw): SiteContent {
     },
     social,
     nav: {
-      items: items.length ? items : d.nav.items,
+      items: withLeadership(items.length ? items : d.nav.items),
       contact: contactLink && raw.nav?.contactButton?.show !== false
         ? { id: 'contact', label: str(raw.nav.contactButton.label, d.nav.contact.label), ...contactLink }
         : d.nav.contact,

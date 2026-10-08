@@ -22,6 +22,8 @@ export function Header({ menuOpen, onOpenMenu, menuButtonRef }: HeaderProps) {
   const { config } = useSiteConfig();
   const scrolled = useScrolled(24);
   const onDark = useOverDark();
+  // The header sits on a light orange tint over dark sections, so its text stays dark.
+  const textOnDark = false;
   const anchor = useAnchor();
   const navItems = config.nav.items;
   const sectionIds = useMemo(
@@ -81,8 +83,8 @@ export function Header({ menuOpen, onOpenMenu, menuButtonRef }: HeaderProps) {
               height={193}
               className={cn(
                 'w-auto transition-[height,filter] duration-500 ease-expo',
-                onDark && 'logo-mono-white',
-                scrolled ? 'h-7 md:h-8' : 'h-8 md:h-9',
+                textOnDark && 'logo-mono-white',
+                scrolled ? 'h-6 sm:h-7 md:h-8' : 'h-7 sm:h-8 md:h-9',
               )}
             />
           </a>
@@ -98,8 +100,8 @@ export function Header({ menuOpen, onOpenMenu, menuButtonRef }: HeaderProps) {
                       {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                       aria-current={isActive ? 'true' : undefined}
                       className={cn(
-                        'group relative block rounded-xs px-3 py-2 font-outfit text-[0.9375rem] transition-colors duration-300',
-                        onDark
+                        'group relative block rounded-xs px-2 py-2 font-outfit text-[0.875rem] xl:px-3 xl:text-[0.9375rem] transition-colors duration-300',
+                        textOnDark
                           ? isActive
                             ? 'text-white'
                             : 'text-white/65 hover:text-white'
@@ -112,8 +114,8 @@ export function Header({ menuOpen, onOpenMenu, menuButtonRef }: HeaderProps) {
                       <span
                         aria-hidden
                         className={cn(
-                          'absolute inset-x-3 bottom-1 h-px origin-left transition-transform duration-500 ease-expo',
-                          onDark ? 'bg-white' : 'bg-mpas-orange',
+                          'absolute inset-x-2 bottom-1 xl:inset-x-3 h-px origin-left transition-transform duration-500 ease-expo',
+                          textOnDark ? 'bg-white' : 'bg-mpas-orange',
                           isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100',
                         )}
                       />
@@ -133,7 +135,7 @@ export function Header({ menuOpen, onOpenMenu, menuButtonRef }: HeaderProps) {
 
           <div className="flex items-center gap-2" data-header-item>
             <span className="hidden md:block">
-              <Button href={anchor(config.nav.contact.href)} variant={onDark ? 'inverse' : 'primary'} className="h-11 px-5 text-small">
+              <Button href={anchor(config.nav.contact.href)} variant={textOnDark ? 'inverse' : 'primary'} className="h-11 px-5 text-small">
                 {config.nav.contact.label}
               </Button>
             </span>
@@ -142,14 +144,15 @@ export function Header({ menuOpen, onOpenMenu, menuButtonRef }: HeaderProps) {
               ref={menuButtonRef}
               type="button"
               onClick={onOpenMenu}
+              aria-label="Open menu"
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
               className="group -mr-2 flex h-11 items-center gap-3 rounded-xs px-2 lg:hidden"
             >
-              <span className={cn('eyebrow', onDark ? 'text-white' : 'text-ink')}>Menu</span>
+              <span className={cn('eyebrow hidden whitespace-nowrap sm:inline', textOnDark ? 'text-white' : 'text-ink')}>Menu</span>
               <span aria-hidden className="flex w-6 flex-col items-end gap-[5px]">
-                <span className={cn('h-px w-6', onDark ? 'bg-white' : 'bg-mpas-orange', ' transition-[width] duration-500 ease-expo group-hover:w-4')} />
-                <span className={cn('h-px w-4', onDark ? 'bg-white' : 'bg-mpas-orange', ' transition-[width] duration-500 ease-expo group-hover:w-6')} />
+                <span className={cn('h-px w-6', textOnDark ? 'bg-white' : 'bg-mpas-orange', ' transition-[width] duration-500 ease-expo group-hover:w-4')} />
+                <span className={cn('h-px w-4', textOnDark ? 'bg-white' : 'bg-mpas-orange', ' transition-[width] duration-500 ease-expo group-hover:w-6')} />
               </span>
             </button>
           </div>

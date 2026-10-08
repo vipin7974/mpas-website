@@ -12,13 +12,13 @@ import { Reveal } from '@/components/common/Reveal';
 function FooterColumn({ title, children, className }: { title: string; children: ReactNode; className?: string }) {
   return (
     <div className={className}>
-      <h2 className="eyebrow mb-5 text-text-inverse-muted">{title}</h2>
+      <h2 className="eyebrow mb-5 text-ink/70">{title}</h2>
       <ul className="space-y-3">{children}</ul>
     </div>
   );
 }
 
-const linkClass = 'link-underline text-small text-white/80 transition-colors duration-300 hover:text-white';
+const linkClass = 'link-underline text-small text-ink/85 transition-colors duration-300 hover:text-ink';
 
 export function Footer() {
   const { config } = useSiteConfig();
@@ -27,7 +27,7 @@ export function Footer() {
   const site = { ...config.brand, year: new Date().getFullYear() };
   const services = config.services;
   return (
-    <footer data-header-theme="dark" className="relative bg-mpas-green-dark text-text-inverse" aria-labelledby="footer-title">
+    <footer data-header-theme="dark" className="relative bg-mpas-green text-ink" aria-labelledby="footer-title">
       <h2 id="footer-title" className="sr-only">
         Site footer
       </h2>
@@ -42,19 +42,19 @@ export function Footer() {
               width={956}
               height={193}
               loading="lazy"
-              className="logo-mono-white h-9 w-auto md:h-10"
+              className="logo-mono-ink h-9 w-auto md:h-10"
             />
-            <Reveal as="p" variant="lines" className="mt-10 max-w-md font-outfit text-h3 font-light text-white">
-              <span className="font-extralight text-white/70">{firstWord}</span> {restWords.join(' ')}
+            <Reveal as="p" variant="lines" className="mt-10 max-w-md font-outfit text-h3 font-light text-ink">
+              <span className="font-extralight text-ink/65">{firstWord}</span> {restWords.join(' ')}
             </Reveal>
             <div className="mt-10">
-              <Button href={anchor('#contact')} variant="outline-inverse">
+              <Button href={anchor('#contact')} variant="primary">
                 {config.footer.buttonLabel}
               </Button>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-x-6 gap-y-12 sm:grid-cols-3 lg:col-span-6 lg:col-start-7">
+          <div className="grid grid-cols-1 gap-x-6 gap-y-12 min-[480px]:grid-cols-2 sm:grid-cols-3 lg:col-span-6 lg:col-start-7">
             <FooterColumn title="Explore">
               {config.nav.items.map((item) => (
                 <li key={item.id}>
@@ -75,7 +75,7 @@ export function Footer() {
               ))}
             </FooterColumn>
 
-            <FooterColumn title="Contact" className="col-span-2 sm:col-span-1">
+            <FooterColumn title="Contact" className="min-[480px]:col-span-2 sm:col-span-1">
               <li>
                 <a href={`mailto:${site.email}`} className={`${linkClass} break-words`}>
                   {site.email}
@@ -88,7 +88,7 @@ export function Footer() {
                   </a>
                 </li>
               )}
-              <li className="text-small text-white/80">{site.location}</li>
+              <li className="text-small text-ink/85">{site.location}</li>
               {config.social.map((s) => (
                 <li key={s.label}>
                   <a href={s.url} target="_blank" rel="noopener noreferrer" className={linkClass}>
@@ -105,23 +105,34 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-20 flex flex-col-reverse gap-6 border-t border-ink-line pt-8 md:mt-28 md:flex-row md:items-center md:justify-between">
+        <div className="mt-20 flex flex-col-reverse gap-6 border-t border-ink/25 pt-8 md:mt-28 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-            <p className="text-micro tracking-normal text-text-inverse-muted">
+            <p className="text-micro tracking-normal text-ink/70">
               © {site.year} {site.name}. {config.footer.copyright}
             </p>
             {config.footer.legalLinks.map((l) => (
-              <a key={l.url} href={l.url} className="link-underline text-micro tracking-normal text-text-inverse-muted hover:text-white">
+              <a key={l.url} href={l.url} className="link-underline text-micro tracking-normal text-ink/70 hover:text-ink">
                 {l.label}
               </a>
             ))}
+            <p className="text-micro tracking-normal text-ink/60">
+              Developed and managed by{' '}
+              <a
+                href="https://googlixlabs.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-underline text-ink/70 transition-colors duration-300 hover:text-ink"
+              >
+                Googlix Labs
+              </a>
+            </p>
           </div>
           <a
             href="#top"
-            className="group inline-flex items-center gap-3 self-start font-outfit text-small text-white/80 transition-colors hover:text-white md:self-auto"
+            className="group inline-flex items-center gap-3 self-start font-outfit text-small text-ink/85 transition-colors hover:text-ink md:self-auto"
           >
             Back to top
-            <span className="flex size-9 items-center justify-center rounded-full border border-white/20 transition-colors duration-500 group-hover:border-mpas-green group-hover:bg-mpas-green group-hover:text-ink">
+            <span className="flex size-9 items-center justify-center rounded-full border border-ink/30 transition-colors duration-500 group-hover:border-ink group-hover:bg-ink group-hover:text-white">
               <ArrowUp className="size-4 transition-transform duration-500 ease-expo group-hover:-translate-y-0.5" strokeWidth={1.5} aria-hidden />
             </span>
           </a>

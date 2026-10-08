@@ -64,8 +64,8 @@
   }
 
   ::selection {
-    background: var(--color-mpas-green);
-    color: var(--color-ink);
+    background: var(--color-mpas-orange);
+    color: var(--color-white);
   }
 
   :focus-visible {
@@ -114,6 +114,12 @@
 
   /* Media frame used for editorial image crops */
 
+  /* SplitText line masks clip with overflow; leave room for descenders (g, y, p) */
+  .split-line-mask {
+    padding-bottom: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
   /* Soft orange surfaces: keeps the brand orange bright for actions/hover while
      making large background areas calmer and more premium. */
   .bg-orange-soft {
@@ -135,6 +141,10 @@
   /* White mono logo on dark surfaces (brand book, page 04) */
   .logo-mono-white {
     filter: brightness(0) invert(1);
+  }
+
+  .logo-mono-ink {
+    filter: brightness(0);
   }
 
   .no-scrollbar {
