@@ -100,12 +100,12 @@ export function Hero() {
                   </span>
                 </span>
                 <span className="block overflow-hidden pb-[0.2em] -mb-[0.14em]">
-                  <span data-hero-line className="block font-light text-ink">
+                  <span data-hero-line className="block font-extralight text-ink">
                     {config.hero.lines[1]}
                   </span>
                 </span>
                 <span className="block overflow-hidden pb-[0.2em] -mb-[0.14em]">
-                  <span data-hero-line className="block font-light text-ink">
+                  <span data-hero-line className="block font-extralight text-ink">
                     {config.hero.lines[2].replace(/\.$/, '')}
                     <span className="text-mpas-orange-red">.</span>
                   </span>
