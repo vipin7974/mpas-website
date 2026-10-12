@@ -50,10 +50,17 @@ export const industries: Industry[] = [
     imageAlt: 'Engineer working in an automation laboratory',
   },
   {
-    id: 'critical',
-    name: 'Critical Industries',
-    description: 'Aerospace, defense, healthcare, and medical technology.',
+    id: 'medtech',
+    name: 'MedTech / Healthcare',
+    description: 'Medical technology, devices and healthcare infrastructure, from localisation to market access.',
     image: critical,
-    imageAlt: 'Critical industries',
+    imageAlt: 'Medtech and healthcare',
+  },
+  {
+    id: 'aerospace',
+    name: 'Aerospace / Defense',
+    description: 'Aerospace and defense supply chains, partnerships and indigenisation programmes.',
+    image: technology,
+    imageAlt: 'Aerospace and defense',
   },
 ];

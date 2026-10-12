@@ -13,11 +13,11 @@
   --color-white: #ffffff;
 
   /* ---------- UI neutrals ---------- */
-  --color-canvas: #f7f3ea;
+  --color-canvas: #f0f7ec;
   --color-surface: #ffffff;
-  --color-surface-muted: #eee8dc;
-  --color-line: #ddd7cc;
-  --color-line-strong: #bdb5a8;
+  --color-surface-muted: #e2eedb;
+  --color-line: #d0e1c8;
+  --color-line-strong: #a9c19f;
   --color-ink: #18352a;
   --color-ink-soft: #304139;
   --color-ink-line: #547064;
@@ -71,8 +71,8 @@
   --container-copy: 40rem;
   --spacing-gutter: clamp(1.25rem, 0.6rem + 3.2vw, 3.5rem);
   --spacing-section: clamp(5.5rem, 3rem + 8vw, 10.5rem);
-  --spacing-header: 5.5rem;
-  --spacing-header-compact: 4.25rem;
+  --spacing-header: 6.75rem;
+  --spacing-header-compact: 5rem;
 
   /* ---------- Shape ---------- */
   --radius-xs: 2px;
