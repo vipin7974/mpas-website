@@ -88,8 +88,8 @@ export function Hero() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-end lg:gap-8">
           <div className="lg:col-span-8">
             <div data-hero-heading>
-              <p data-hero-fade className="eyebrow mb-8 flex items-center gap-3 text-text-secondary md:mb-10">
-                <span aria-hidden className="bridge-rule w-8" />
+              <p data-hero-fade className="mb-8 flex items-center gap-4 font-outfit text-[1.5rem] font-normal normal-case leading-snug text-ink md:mb-10 md:text-[2.125rem]">
+                <span aria-hidden className="bridge-rule w-10 shrink-0 md:w-14" />
                 {config.hero.eyebrow}
               </p>
 

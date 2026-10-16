@@ -15,7 +15,7 @@ export const defaultContent: SiteContent = {
     name: 'Mahesh Palashikar Advisory Services',
     shortName: 'mpas',
     tagline: 'Bridging Capital, Capability, Execution',
-    email: 'contact@mpasadvisory.in',
+    email: 'info@mpadvs.com',
     phone: '',
     location: 'India',
     logo: '/branding/mpas-logo-horizontal.png',
@@ -74,7 +74,7 @@ export const defaultContent: SiteContent = {
     leadership: { label: 'Leadership', title: '', description: '' },
     'what-we-do': {
       label: 'Strategic Capabilities',
-      title: 'Core Advisory Capabilities',
+      title: 'Our Capabilities',
       description: 'We work alongside leadership teams to turn ambition into an executable path.',
     },
     industries: {
@@ -100,7 +100,7 @@ export const defaultContent: SiteContent = {
   services,
   markets,
   leaders: defaultLeaders,
-  media: { hero: '/images/mumbai_bridge.webp', heroAlt: 'Glass office towers rising into a clear sky', about: '/images/service-supply-chain.webp', quote: '/images/quote-grid.webp', markets: '/images/markets-earth.webp' },
+  media: { hero: '/images/mumbai_bridge.webp', heroAlt: 'Glass office towers rising into a clear sky', about: '/images/about-gateway-of-india.webp', quote: '/images/quote-grid.webp', markets: '/images/markets-earth.webp' },
   seo: {
     title: 'mpas | Mahesh Palashikar Advisory Services',
     description:

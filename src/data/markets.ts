@@ -9,9 +9,9 @@ export interface Market {
 /** Corridors into (and out of) India. Order matches the diagram, top to bottom. */
 export const markets: Market[] = [
   { id: 'north-america', name: 'North America', short: 'North America', focus: 'Capital, technology and advanced manufacturing' },
-  { id: 'europe', name: 'United Kingdom & Europe', short: 'UK & Europe', focus: 'Industrial partnerships and energy transition' },
+  { id: 'europe', name: 'European Union', short: 'European Union', focus: 'Industrial partnerships and energy transition' },
   { id: 'middle-east', name: 'Middle East', short: 'Middle East', focus: 'Sovereign capital and infrastructure' },
-  { id: 'east-asia', name: 'Japan & East Asia', short: 'East Asia', focus: 'Manufacturing, electronics and supply chains' },
+  { id: 'east-asia', name: 'East Asia', short: 'East Asia', focus: 'Manufacturing, electronics and supply chains' },
   { id: 'southeast-asia', name: 'Southeast Asia', short: 'Southeast Asia', focus: 'Trade corridors and regional expansion' },
-  { id: 'oceania', name: 'Australia & Oceania', short: 'Oceania', focus: 'Critical minerals, education and agri-food' },
+  { id: 'oceania', name: 'Australia and New Zealand', short: 'Australia and New Zealand', focus: 'Critical minerals, education and agri-food' },
 ];

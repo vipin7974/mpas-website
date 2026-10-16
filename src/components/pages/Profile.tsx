@@ -2,24 +2,16 @@
 
 import Link from 'next/link';
 import { PortableText, type PortableTextComponents } from '@portabletext/react';
-import { ArrowLeft, Mail } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import type { Leader } from '@/sanity/types';
 import { useSiteConfig } from '@/context/SiteConfig';
 import { Container } from '@/components/common/Container';
 import { Button } from '@/components/common/Button';
 import { Reveal } from '@/components/common/Reveal';
-import { Monogram } from '@/components/sections/Leadership';
+import { Monogram, LinkedinIcon } from '@/components/sections/Leadership';
 
-function Linkedin({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden className={className}>
-      <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" />
-    </svg>
-  );
-}
-
-const actionClass =
-  'group inline-flex items-center gap-2.5 rounded-sm border border-ink/25 px-4 py-2.5 font-outfit text-small font-medium text-ink transition-colors duration-500 hover:border-ink hover:bg-mpas-orange hover:text-white focus-visible:bg-mpas-orange focus-visible:text-white';
+const linkedinClass =
+  'group inline-flex items-center gap-3 rounded-sm bg-[#0A66C2] px-6 py-3.5 font-outfit text-[1.0625rem] font-medium text-white shadow-sm transition-colors duration-300 hover:bg-[#004182] focus-visible:bg-[#004182]';
 
 /** Biography copy: “Section heading” blocks become the small captions; bullets keep the site's dash style. */
 const bioComponents: PortableTextComponents = {
@@ -52,9 +44,6 @@ const bioComponents: PortableTextComponents = {
 };
 
 function ProfileBody({ leader }: { leader: Leader }) {
-  const { config } = useSiteConfig();
-  const email = leader.email || config.brand.email;
-  const subject = encodeURIComponent(`Enquiry for ${leader.name}`);
   const hasBio = leader.executiveSummary.length > 0 || leader.biography.length > 0;
   return (
     <article id="top" className="pb-section pt-[calc(var(--spacing-header)+2.5rem)] md:pt-[calc(var(--spacing-header)+4rem)]">
@@ -72,13 +61,10 @@ function ProfileBody({ leader }: { leader: Leader }) {
             <p className="eyebrow mt-4 text-mpas-green-dark">{leader.title}</p>
             <div className="mt-6 flex flex-wrap gap-3">
               {leader.linkedin && (
-                <a href={leader.linkedin} target="_blank" rel="noopener noreferrer" className={actionClass}>
-                  <Linkedin className="size-4" /> LinkedIn
+                <a href={leader.linkedin} target="_blank" rel="noopener noreferrer" className={linkedinClass} aria-label={`${leader.name} on LinkedIn (opens in a new tab)`}>
+                  <LinkedinIcon className="size-6" /> View LinkedIn profile
                 </a>
               )}
-              <a href={`mailto:${email}?subject=${subject}`} className={actionClass}>
-                <Mail className="size-4" strokeWidth={1.5} aria-hidden /> Email
-              </a>
             </div>
           </div>
         </header>

@@ -30,7 +30,7 @@ export const defaultLeaders: Leader[] = [
       bullet('Strategic Sectors', 'Healthcare, medical technology, aerospace and defense, advanced manufacturing, and industrial electronics.'),
     ],
     photo: '',
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/maheshpalashikar',
     email: '',
   },
   {
@@ -54,7 +54,7 @@ export const defaultLeaders: Leader[] = [
       ),
     ],
     photo: '',
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/ravi1anand',
     email: '',
   },
   {
@@ -66,7 +66,7 @@ export const defaultLeaders: Leader[] = [
     executiveSummary: [],
     biography: [],
     photo: '',
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/shalini-saxena-9270247',
     email: '',
   },
 ];

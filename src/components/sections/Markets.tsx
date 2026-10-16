@@ -12,8 +12,8 @@ import { useSiteConfig } from '@/context/SiteConfig';
 import { Reveal } from '@/components/common/Reveal';
 
 const VIEW = { w: 1000, h: 700 };
-const INDIA = { x: 790, y: 350 };
-const NODE_X = 300;
+const INDIA = { x: 830, y: 350 };
+const NODE_X = 360;
 const nodeY = (i: number) => 95 + i * 102;
 const arcPath = (y: number) => {
   const cx = (NODE_X + INDIA.x) / 2;

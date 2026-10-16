@@ -99,7 +99,7 @@ function mapContent(raw: Raw): SiteContent {
       biography: arr<PortableTextBlock>(m.biography),
       photo: img(m.photo, 800),
       linkedin: m.linkedin ?? '',
-      email: m.email ?? '',
+      email: '',
     }));
 
   const social = (

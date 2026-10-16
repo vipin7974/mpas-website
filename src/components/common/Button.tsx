@@ -30,9 +30,9 @@ const variants: Record<Variant, string> = {
     solid,
     'border border-white/30 text-white before:bg-white hover:border-white hover:text-ink focus-visible:text-ink',
   ),
-  link: 'inline-flex items-center gap-2.5 py-1 font-outfit text-small font-medium uppercase tracking-[0.12em] text-ink',
+  link: 'inline-flex items-center gap-2.5 py-1 font-outfit text-small font-medium tracking-[0.01em] text-ink',
   'link-inverse':
-    'inline-flex items-center gap-2.5 py-1 font-outfit text-small font-medium uppercase tracking-[0.12em] text-white',
+    'inline-flex items-center gap-2.5 py-1 font-outfit text-small font-medium tracking-[0.01em] text-white',
 };
 
 /** Arrow that slides out to the right while a twin slides in from the left. */

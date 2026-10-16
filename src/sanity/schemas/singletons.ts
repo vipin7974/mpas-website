@@ -167,7 +167,7 @@ export const homepage = defineType({
               type: 'object',
               fields: [
                 defineField({ name: 'name', title: 'Region name', type: 'string', validation: (Rule) => Rule.required() }),
-                defineField({ name: 'short', title: 'Short name for the map', type: 'string', description: 'A shorter version that fits on the map, e.g. “UK & Europe”.', validation: (Rule) => Rule.required() }),
+                defineField({ name: 'short', title: 'Short name for the map', type: 'string', description: 'A shorter version that fits on the map, e.g. “European Union”.', validation: (Rule) => Rule.required() }),
                 defineField({ name: 'focus', title: 'What we do there', type: 'string', validation: (Rule) => Rule.required() }),
               ],
               preview: { select: { title: 'name', subtitle: 'focus' } },

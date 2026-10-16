@@ -44,7 +44,7 @@ export function LoginForm() {
   }
 
   const field = { display: 'block', width: '100%', boxSizing: 'border-box', padding: '12px 14px', border: `1px solid ${colors.line}`, borderRadius: 6, fontSize: 16, background: '#fff', color: colors.ink, marginTop: 6 } as const;
-  const label = { display: 'block', fontSize: 13, letterSpacing: '0.04em', color: colors.muted, textTransform: 'uppercase', fontWeight: 600 } as const;
+  const label = { display: 'block', fontSize: 13, color: colors.muted, fontWeight: 600 } as const;
 
   return (
     <main style={{ minHeight: '100svh', display: 'grid', placeItems: 'center', background: colors.canvas, padding: 20, fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, sans-serif' }}>

@@ -86,10 +86,9 @@
   /* Eyebrow / section index: "01 / About Us" (brand book pattern) */
   .eyebrow {
     font-family: var(--font-outfit);
-    font-size: var(--text-micro);
-    line-height: var(--text-micro--line-height);
-    letter-spacing: var(--text-micro--letter-spacing);
-    text-transform: uppercase;
+    font-size: 0.9375rem;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
     font-weight: 500;
   }
 
@@ -194,6 +193,3 @@
   }
 }
 
-@media (max-width: 639px) {
-  .eyebrow { letter-spacing: 0.11em; }
-}

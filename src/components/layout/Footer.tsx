@@ -12,13 +12,13 @@ import { Reveal } from '@/components/common/Reveal';
 function FooterColumn({ title, children, className }: { title: string; children: ReactNode; className?: string }) {
   return (
     <div className={className}>
-      <h2 className="eyebrow mb-5 text-ink/70">{title}</h2>
-      <ul className="space-y-3">{children}</ul>
+      <h2 className="mb-6 font-outfit text-[1.125rem] font-medium text-ink md:text-[1.25rem]">{title}</h2>
+      <ul className="space-y-3.5">{children}</ul>
     </div>
   );
 }
 
-const linkClass = 'link-underline text-small text-ink/85 transition-colors duration-300 hover:text-ink';
+const linkClass = 'link-underline text-[1.0625rem] leading-snug text-ink/90 md:text-[1.1875rem] transition-colors duration-300 hover:text-ink';
 
 export function Footer() {
   const { config } = useSiteConfig();
@@ -27,7 +27,7 @@ export function Footer() {
   const site = { ...config.brand, year: new Date().getFullYear() };
   const services = config.services;
   return (
-    <footer data-header-theme="dark" className="relative bg-mpas-green text-ink" aria-labelledby="footer-title">
+    <footer data-header-theme="dark" className="relative bg-mpas-green-soft text-ink" aria-labelledby="footer-title">
       <h2 id="footer-title" className="sr-only">
         Site footer
       </h2>
@@ -54,7 +54,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-x-6 gap-y-12 min-[480px]:grid-cols-2 sm:grid-cols-3 lg:col-span-6 lg:col-start-7">
+          <div className="grid grid-cols-1 gap-x-6 gap-y-12 min-[480px]:grid-cols-2 sm:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)_minmax(0,1.5fr)] lg:col-span-6 lg:col-start-7">
             <FooterColumn title="Explore">
               {config.nav.items.map((item) => (
                 <li key={item.id}>
@@ -77,7 +77,7 @@ export function Footer() {
 
             <FooterColumn title="Contact" className="min-[480px]:col-span-2 sm:col-span-1">
               <li>
-                <a href={`mailto:${site.email}`} className={`${linkClass} break-words`}>
+                <a href={`mailto:${site.email}`} className={`${linkClass} [overflow-wrap:anywhere] lg:[overflow-wrap:normal]`}>
                   {site.email}
                 </a>
               </li>
@@ -88,7 +88,7 @@ export function Footer() {
                   </a>
                 </li>
               )}
-              <li className="text-small text-ink/85">{site.location}</li>
+              <li className="text-[1.0625rem] leading-snug text-ink/90 md:text-[1.1875rem]">{site.location}</li>
               {config.social.map((s) => (
                 <li key={s.label}>
                   <a href={s.url} target="_blank" rel="noopener noreferrer" className={linkClass}>

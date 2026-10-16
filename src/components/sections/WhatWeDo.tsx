@@ -64,7 +64,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
           aria-expanded={open}
           aria-controls={panelId}
           onClick={() => setOpen((v) => !v)}
-          className="group/btn mt-6 inline-flex items-center gap-3 py-1 font-outfit text-small font-medium uppercase tracking-[0.12em] text-ink"
+          className="group/btn mt-6 inline-flex items-center gap-3 py-1 font-outfit text-small font-medium tracking-[0.01em] text-ink"
         >
           <span className="link-underline group-hover/btn:bg-[length:100%_1px]">{open ? 'Show less' : 'Read more'}</span>
           <span className="flex size-8 items-center justify-center rounded-full border border-ink/20 transition-colors duration-500 group-hover/btn:border-ink group-hover/btn:bg-mpas-orange group-hover/btn:text-white">

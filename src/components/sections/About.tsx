@@ -30,7 +30,7 @@ export function About() {
           <Reveal variant="clip" className="media-frame aspect-[4/5] rounded-md lg:sticky lg:top-[calc(var(--spacing-header-compact)+2rem)]">
             <img
               src={config.media.about}
-              alt="A container ship loaded with cargo at sea"
+              alt="The Gateway of India in Mumbai on a clear day"
               width={1100}
               height={1466}
               loading="lazy"
