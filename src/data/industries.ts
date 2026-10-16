@@ -1,5 +1,5 @@
-const manufacturing = '/images/industry-manufacturing.webp';
-const energy = '/images/industry-energy.webp';
+const manufacturing = '/images/industry-manufacturing-tata-pune.webp';
+const energy = '/images/service-decarbonization-muppandal.webp';
 const infrastructure = '/images/industry-infrastructure-atal-setu.webp';
 const supplyChain = '/images/industry-supply-chain-freight.webp';
 const technology = '/images/industry-technology-chandrayaan.webp';
@@ -22,14 +22,14 @@ export const industries: Industry[] = [
     name: 'Energy & Renewables',
     description: 'Strategy and partnerships across the energy transition, from utility-scale solar to storage.',
     image: energy,
-    imageAlt: 'Aerial view of a large solar farm',
+    imageAlt: 'Wind farm at Muppandal, Tamil Nadu',
   },
   {
     id: 'manufacturing',
     name: 'Manufacturing & Industrials',
     description: 'Localisation, capacity expansion and operational excellence for India’s manufacturing push.',
     image: manufacturing,
-    imageAlt: 'Industrial processing equipment and pipework',
+    imageAlt: 'Tata Motors manufacturing facility in Pune',
   },
   {
     id: 'logistics',

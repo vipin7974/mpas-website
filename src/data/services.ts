@@ -28,8 +28,8 @@ export const services: Service[] = [
       'Creating high-impact collaborations and investment opportunities.',
       'Board, CEO, and executive advisory paired with leadership coaching and strategic decision support.',
     ],
-    image: '/images/expertise-boardroom.webp',
-    imageAlt: 'Leadership team in discussion around a boardroom table',
+    image: '/images/industry-financial-bkc.webp',
+    imageAlt: 'Bandra Kurla Complex business district, Mumbai',
   },
   {
     id: 'strategic-ecosystem-integrator',
@@ -40,8 +40,8 @@ export const services: Service[] = [
       'Acting as a strategic enabler bridging corporates, government entities, project delivery firms, and the professional ecosystem.',
       'Facilitating strategic discussions, stakeholder mapping, and advisory support for government engagement.',
     ],
-    image: '/images/service-partnerships.webp',
-    imageAlt: 'Advisors reviewing documents together at a desk',
+    image: '/images/industry-infrastructure-atal-setu.webp',
+    imageAlt: 'Atal Setu sea bridge, Mumbai',
   },
   {
     id: 'industrial-growth-supply-chain',
@@ -52,8 +52,8 @@ export const services: Service[] = [
       'Building resilient, efficient, and future-ready value chains.',
       'Identification, evaluation, and strategic vetting of consultants, advisors, technology partners, EPCs, and PMCs.',
     ],
-    image: '/images/service-supply-chain.webp',
-    imageAlt: 'Freight and supply chain operations',
+    image: '/images/industry-supply-chain-freight.webp',
+    imageAlt: 'Dedicated Freight Corridor goods train in India',
   },
   {
     id: 'decarbonization-sustainability',
@@ -62,8 +62,8 @@ export const services: Service[] = [
     points: [
       'Driving strategic growth in the energy transition across renewable energy, green hydrogen, biogas, and power generation.',
     ],
-    image: '/images/service-decarbonization.webp',
-    imageAlt: 'Renewable energy infrastructure',
+    image: '/images/service-decarbonization-muppandal.webp',
+    imageAlt: 'Wind farm at Muppandal, Tamil Nadu',
   },
   {
     id: 'capital-to-execution-integration',
@@ -73,7 +73,7 @@ export const services: Service[] = [
       'Evaluating strategic options for establishing business entities, joint ventures, partnerships, or alliances.',
       'High-level commercial and strategic due diligence, alongside business structuring.',
     ],
-    image: '/images/hero.webp',
-    imageAlt: 'Glass office towers seen from street level',
+    image: '/images/mumbai_bridge.webp',
+    imageAlt: 'Bandra-Worli Sea Link and Mumbai skyline',
   },
 ];
