@@ -27,7 +27,7 @@ export function Footer() {
   const site = { ...config.brand, year: new Date().getFullYear() };
   const services = config.services;
   return (
-    <footer data-header-theme="dark" className="relative bg-mpas-green-soft text-ink" aria-labelledby="footer-title">
+    <footer data-header-theme="dark" className="relative bg-[linear-gradient(90deg,#91BD55_0%,#79B254_50%,#5DA954_100%)] text-ink" aria-labelledby="footer-title">
       <h2 id="footer-title" className="sr-only">
         Site footer
       </h2>
