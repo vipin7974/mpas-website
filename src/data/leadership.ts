@@ -62,9 +62,21 @@ export const defaultLeaders: Leader[] = [
     name: 'Shalini Saxena',
     initials: 'SS',
     title: 'Senior Advisor',
-    summary: '',
-    executiveSummary: [],
-    biography: [],
+    summary:
+      'A legal, risk, and regulatory leader with over 25 years of experience across the energy, financial services, and fintech sectors, and Global Head of Legal at Pine Labs.',
+    executiveSummary: [
+      'Shalini Saxena brings over 25 years of legal, risk, and regulatory leadership across the energy, financial services, and fintech sectors. As Global Head of Legal at Pine Labs, she rejoined the company to lead it through its 2025 listing on the BSE and NSE, following senior legal roles at GE and CoinDCX. She is also co-founder of CADRE, an online dispute resolution platform. At mpas, she advises clients on regulatory strategy, risk and compliance, and the legal structuring of complex cross-border transactions.',
+    ],
+    biography: [
+      heading('Legal Leadership & Transactional Impact'),
+      paragraph(
+        'Her work spans more than 20 countries across Asia-Pacific, the Middle East, Africa, Europe, and the Americas. As Chief Risk Officer and General Counsel at GE Power & Water and GE Renewables, she supported the integration of Alstom’s businesses following GE’s 2015 acquisition. She also set up GE’s first turnkey wind farm initiative, managing risk end to end from land acquisition to grid connection, and worked on a $170 million power plant refurbishment and retrofit deal with Reliance. Her transactional experience also covers non-recourse project financing, debt and equity structuring, joint ventures, and M&A.',
+      ),
+      heading('Regulatory Engagement & Corporate Governance'),
+      paragraph(
+        'An experienced regulatory and governance leader, she has worked closely with the Reserve Bank of India, the Ministry of Finance, the Financial Intelligence Unit, and export, customs, and energy authorities at central and state levels. Under her legal leadership, Pine Labs received one of the first three Payment Aggregator licenses the RBI issued in 2022. At CoinDCX, she drove compliance and corporate governance in a largely unregulated industry. Earlier, she managed GE’s two government joint ventures with BHEL through tendering and board participation. She also secured NBFC status for GE’s consumer finance business in India and kept it compliant with credit card regulations.',
+      ),
+    ],
     photo: '',
     linkedin: 'https://www.linkedin.com/in/shalini-saxena-9270247',
     email: '',
