@@ -29,7 +29,7 @@ export const defaultLeaders: Leader[] = [
       bullet('Industrial Infrastructure', 'Thermal power, transmission and distribution, grid solutions, and electrification.'),
       bullet('Strategic Sectors', 'Healthcare, medical technology, aerospace and defense, advanced manufacturing, and industrial electronics.'),
     ],
-    photo: '',
+    photo: '/images/leader-mahesh-palashikar.webp',
     linkedin: 'https://www.linkedin.com/in/maheshpalashikar',
     email: '',
   },

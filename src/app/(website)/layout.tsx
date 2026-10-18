@@ -10,7 +10,7 @@ import { SiteConfigProvider } from '@/context/SiteConfig';
 import { SiteShell } from '@/components/layout/SiteShell';
 import { LiveRefresh } from '@/components/layout/LiveRefresh';
 
-export const viewport: Viewport = { themeColor: '#FAF8F2' };
+export const viewport: Viewport = { themeColor: '#F9F5EE' };
 
 export async function generateMetadata(): Promise<Metadata> {
   const { seo, brand } = await getSiteContent();

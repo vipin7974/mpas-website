@@ -2,7 +2,7 @@ import { buildLegacyTheme } from 'sanity';
 
 /** Brand palette, taken from the website's design tokens. */
 export const brand = {
-  canvas: '#f7f3ea',
+  canvas: '#f9f5ee',
   surface: '#ffffff',
   ink: '#18352a',
   green: '#39b54a',

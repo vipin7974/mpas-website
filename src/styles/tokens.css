@@ -15,17 +15,17 @@
 
   /* ---------- UI neutrals ----------
    * Page background options (original beige #f7f3ea made progressively lighter).
-   * Active: Option B (60%). To switch, replace the four values below with another set:
+   * Active: Option A (80%), canvas #f9f5ee (final). To switch, replace the four values below with another set:
    *   Option A (80%): canvas #f9f5ee · muted #f1ede3 · line #e4dfd6 · line-strong #cac4b9
    *   Option B (60%): canvas #faf8f2 · muted #f5f1ea · line #ebe7e0 · line-strong #d7d3cb
    *   Option C (40%): canvas #fcfaf7 · muted #f8f6f1 · line #f1efeb · line-strong #e5e1dc
    *   Fallback: snow white  canvas #ffffff · muted #f6f6f4 · line #ebebe8 · line-strong #d6d6d2
    */
-  --color-canvas: #faf8f2;
+  --color-canvas: #f9f5ee;
   --color-surface: #ffffff;
-  --color-surface-muted: #f5f1ea;
-  --color-line: #ebe7e0;
-  --color-line-strong: #d7d3cb;
+  --color-surface-muted: #f1ede3;
+  --color-line: #e4dfd6;
+  --color-line-strong: #cac4b9;
 
   --color-ink: #18352A;
 --color-ink-soft: #304139;

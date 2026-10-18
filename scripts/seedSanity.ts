@@ -60,6 +60,7 @@ async function main() {
       ...(l.summary && { shortIntro: l.summary }),
       executiveSummary: l.executiveSummary.map((t) => paragraph(t)) as PortableTextBlock[],
       biography: l.biography,
+      ...(l.photo && { photo: await image(l.photo, l.name) }),
       ...(l.linkedin && { linkedin: l.linkedin }),
       ...(l.email && { email: l.email }),
     });
