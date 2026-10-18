@@ -53,7 +53,7 @@ export const defaultLeaders: Leader[] = [
         'An experienced governance leader, he has served as a Board Director for GE Morocco and GE India Power Services (GEPSIL), providing fiduciary oversight and strategic direction for joint ventures and regional entities. Demonstrating a foundational commitment to corporate ethics and compliance, he also served as the Senior Ombudsperson for the MENAT and South Asia regions.',
       ),
     ],
-    photo: '',
+    photo: '/images/leader-ravi-anand.webp',
     linkedin: 'https://www.linkedin.com/in/ravi1anand',
     email: '',
   },

@@ -73,7 +73,7 @@ export const services: Service[] = [
       'Evaluating strategic options for establishing business entities, joint ventures, partnerships, or alliances.',
       'High-level commercial and strategic due diligence, alongside business structuring.',
     ],
-    image: '/images/mumbai_bridge.webp',
-    imageAlt: 'Bandra-Worli Sea Link and Mumbai skyline',
+    image: '/images/service-capital-bse-dalal-street.webp',
+    imageAlt: 'BSE building on Dalal Street, Mumbai',
   },
 ];
