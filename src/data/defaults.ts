@@ -15,7 +15,7 @@ export const defaultContent: SiteContent = {
     name: 'Mahesh Palashikar Advisory Services',
     shortName: 'mpas',
     tagline: 'Bridging Capital, Capability, Execution',
-    email: 'info@mpadvs.com',
+    email: 'connect@mpadvs.com',
     phone: '',
     location: 'India',
     logo: '/branding/mpas-logo-horizontal.png',

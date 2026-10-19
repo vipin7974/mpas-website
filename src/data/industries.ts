@@ -5,7 +5,7 @@ const supplyChain = '/images/industry-supply-chain-logistics.webp';
 const technology = '/images/industry-technology-chandrayaan.webp';
 const aerospace = '/images/industry-aerospace-tejas.webp';
 const financial = '/images/industry-financial-bkc.webp';
-const agri = '/images/industry-agri-food-tea.webp';
+const electronics = '/images/industry-advanced-electronics-isro.webp';
 const medtech = '/images/industry-medtech-ultrasound.webp';
 
 export interface Industry {
@@ -53,9 +53,16 @@ export const industries: Industry[] = [
     imageAlt: 'An indigenous Tejas fighter aircraft on the apron at an Indian airbase',
   },
   {
+    id: 'advanced-electronics',
+    name: 'Advanced Electronics',
+    description: 'Electronics manufacturing, semiconductors and strategic components, from design to scaled production.',
+    image: electronics,
+    imageAlt: 'Engineers integrating an ISRO communication satellite in a clean room',
+  },
+  {
     id: 'technology',
     name: 'Technology & Engineering',
-    description: 'Advanced engineering, electronics and technology-led capability building.',
+    description: 'Advanced engineering and technology-led capability building.',
     image: technology,
     imageAlt: 'The Chandrayaan-3 lander module in an ISRO clean room',
   },
@@ -72,12 +79,5 @@ export const industries: Industry[] = [
     description: 'Connecting institutional capital with India’s fastest-growing businesses and projects.',
     image: financial,
     imageAlt: 'Office towers in Mumbai’s Bandra Kurla Complex financial district',
-  },
-  {
-    id: 'agri-food',
-    name: 'Agri-Food & Agribusiness',
-    description: 'Value-chain, processing and export strategy across India’s food and agriculture economy.',
-    image: agri,
-    imageAlt: 'Tea plantations on the hills of Darjeeling',
   },
 ];

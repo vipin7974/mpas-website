@@ -9,7 +9,7 @@ export const site = {
   // PLACEHOLDER: confirm the production domain (also used in index.html).
   url: 'https://www.mpasadvisory.in',
   // PLACEHOLDER: confirm the public enquiries address.
-  email: 'info@mpadvs.com',
+  email: 'connect@mpadvs.com',
   // PLACEHOLDER: confirm the office location.
   location: 'India',
   year: new Date().getFullYear(),

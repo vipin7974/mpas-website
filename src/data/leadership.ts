@@ -77,7 +77,7 @@ export const defaultLeaders: Leader[] = [
         'An experienced regulatory and governance leader, she has worked closely with the Reserve Bank of India, the Ministry of Finance, the Financial Intelligence Unit, and export, customs, and energy authorities at central and state levels. Under her legal leadership, Pine Labs received one of the first three Payment Aggregator licenses the RBI issued in 2022. At CoinDCX, she drove compliance and corporate governance in a largely unregulated industry. Earlier, she managed GE’s two government joint ventures with BHEL through tendering and board participation. She also secured NBFC status for GE’s consumer finance business in India and kept it compliant with credit card regulations.',
       ),
     ],
-    photo: '',
+    photo: '/images/leader-shalini-saxena.webp',
     linkedin: 'https://www.linkedin.com/in/shalini-saxena-9270247',
     email: '',
   },
