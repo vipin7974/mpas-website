@@ -33,7 +33,7 @@ export const industries: Industry[] = [
   },
   {
     id: 'logistics',
-    name: 'Logistics & Supply Chain',
+    name: 'Supply Chain',
     description: 'Network design, warehousing and trade corridors built for scale and resilience.',
     image: supplyChain,
     imageAlt: 'Warehouse racking stocked with palletised goods',
