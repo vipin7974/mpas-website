@@ -17,7 +17,7 @@ export const services: Service[] = [
       'Actionable insights for market entry, expansion, and investment decisions.',
       'Market, sector, and industry research, alongside competitive landscape and opportunity assessments.',
     ],
-    image: '/images/service-india.webp',
+    image: '/images/service-india-gate.webp',
     imageAlt: 'India Gate in New Delhi at dusk',
   },
   {
@@ -28,8 +28,8 @@ export const services: Service[] = [
       'Creating high-impact collaborations and investment opportunities.',
       'Board, CEO, and executive advisory paired with leadership coaching and strategic decision support.',
     ],
-    image: '/images/industry-financial-bkc.webp',
-    imageAlt: 'Bandra Kurla Complex business district, Mumbai',
+    image: '/images/service-board-advisory.webp',
+    imageAlt: 'Advisory team meeting around a laptop',
   },
   {
     id: 'strategic-ecosystem-integrator',
@@ -52,8 +52,8 @@ export const services: Service[] = [
       'Building resilient, efficient, and future-ready value chains.',
       'Identification, evaluation, and strategic vetting of consultants, advisors, technology partners, EPCs, and PMCs.',
     ],
-    image: '/images/industry-supply-chain-freight.webp',
-    imageAlt: 'Dedicated Freight Corridor goods train in India',
+    image: '/images/service-industrial-growth.webp',
+    imageAlt: 'Aerial view of an industrial complex in India',
   },
   {
     id: 'decarbonization-sustainability',
@@ -62,8 +62,8 @@ export const services: Service[] = [
     points: [
       'Driving strategic growth in the energy transition across renewable energy, green hydrogen, biogas, and power generation.',
     ],
-    image: '/images/service-decarbonization-muppandal.webp',
-    imageAlt: 'Wind farm at Muppandal, Tamil Nadu',
+    image: '/images/service-decarbonization.webp',
+    imageAlt: 'Thermal power plant cooling tower and chimney in rural India',
   },
   {
     id: 'capital-to-execution-integration',
