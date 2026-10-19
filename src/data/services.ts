@@ -17,7 +17,7 @@ export const services: Service[] = [
       'Actionable insights for market entry, expansion, and investment decisions.',
       'Market, sector, and industry research, alongside competitive landscape and opportunity assessments.',
     ],
-    image: '/images/service-india-gate.webp',
+    image: '/images/service-india.webp',
     imageAlt: 'India Gate in New Delhi at dusk',
   },
   {
@@ -63,7 +63,7 @@ export const services: Service[] = [
       'Driving strategic growth in the energy transition across renewable energy, green hydrogen, biogas, and power generation.',
     ],
     image: '/images/service-decarbonization.webp',
-    imageAlt: 'Thermal power plant cooling tower and chimney in rural India',
+    imageAlt: 'Wind turbines across farmland at sunrise',
   },
   {
     id: 'capital-to-execution-integration',

@@ -1,7 +1,7 @@
 const manufacturing = '/images/industry-manufacturing.webp';
 const energy = '/images/industry-energy.webp';
 const infrastructure = '/images/industry-infrastructure-atal-setu.webp';
-const supplyChain = '/images/industry-supply-chain-freight.webp';
+const supplyChain = '/images/industry-supply-chain-logistics.webp';
 const technology = '/images/industry-technology-chandrayaan.webp';
 const aerospace = '/images/industry-aerospace-tejas.webp';
 const financial = '/images/industry-financial-bkc.webp';
@@ -36,7 +36,7 @@ export const industries: Industry[] = [
     name: 'Logistics & Supply Chain',
     description: 'Network design, warehousing and trade corridors built for scale and resilience.',
     image: supplyChain,
-    imageAlt: 'A container freight train on India’s Western Dedicated Freight Corridor',
+    imageAlt: 'Warehouse racking stocked with palletised goods',
   },
   {
     id: 'medtech',
