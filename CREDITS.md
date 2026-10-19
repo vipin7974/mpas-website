@@ -1,6 +1,5 @@
 # Image credits
 
-- Gateway of India, Mumbai (About section): photo by Diego Delso (delso.photo), Free Art License, via Wikimedia Commons ("Mumbai 03-2016 30 Gateway of India.jpg").
 - Tejas aircraft (Aerospace / Defense): Government of India, GODL-India, via Wikimedia Commons.
 - Chandrayaan-3 lander module (Technology & Engineering): ISRO, GODL-India, via Wikimedia Commons.
 - Atal Setu / Trans Harbour Link (Infrastructure): Amitbalani, CC0, via Wikimedia Commons.
